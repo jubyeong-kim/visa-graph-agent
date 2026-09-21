@@ -1,12 +1,15 @@
 """평가 — 홉수별 채점 + basic RAG(BM25) 대조 + 경로 재현율 + 실패 층 분류.
 
 세 가지를 잰다.
-  ① 정답률      LLM 심판이 기대 정답과 대조한다. 심판은 생성 모델과 다른 모델을 쓴다.
-  ② 경로 재현율  기대 경로의 삼중항이 실제 근거에 몇 개나 들어왔나.
-                 골든셋은 원문에서 썼고 그래프는 표현을 다듬으므로 느슨하게 맞춘다.
-                 엄격 일치만 보면 정규화가 잘된 그래프가 오히려 점수를 잃는다.
-  ③ 실패 층      틀린 건이 색인·탐색·생성 중 어디서 깨졌는지 가른다.
-                 고칠 곳을 지목하지 못하는 점수는 쓸모가 없다.
+  ① 정답률          LLM 심판이 기대 정답과 대조한다. 심판은 생성 모델과 다른 모델을 쓴다.
+  ② 경로 재현·정밀·F1
+                     기대 경로의 삼중항이 실제 근거에 몇 개나 들어왔나(재현),
+                     그리고 모은 근거 중 몇 개가 쓸모 있었나(정밀).
+                     **재현율만 재면 근거를 많이 퍼올릴수록 점수가 오른다.** 그래서 F1 을 함께 낸다.
+                     골든셋은 원문에서 썼고 그래프는 표현을 다듬으므로 느슨하게 맞춘다.
+                     엄격 일치만 보면 정규화가 잘된 그래프가 오히려 점수를 잃는다.
+  ③ 실패 층          틀린 건이 색인·탐색·생성 중 어디서 깨졌는지 가른다.
+                     고칠 곳을 지목하지 못하는 점수는 쓸모가 없다.
 """
 import glob
 import json
@@ -81,9 +84,21 @@ def node_match(a, b):
     return fuzz.partial_ratio(a, b) >= 80 or fuzz.token_set_ratio(a, b) >= 75
 
 
-def path_recall(expected, evidence):
+def path_scores(expected, evidence):
+    """경로 재현율·정밀도·F1.
+
+    재현율만 재면 **근거를 많이 퍼올릴수록 점수가 오른다.** 극단적으로 그래프 전체를
+    근거로 넘기면 재현율 100% 다. 실제로 이 프로젝트가 그 방향으로 새고 있었다 —
+    기대 경로 21개에 근거 63개를 제시해 재현율은 높은데 정밀도가 33% 였다.
+
+    정밀도는 "모은 근거 중 기대 경로에 해당하는 비율"로 잰다. 값 자체는 낮게 나온다.
+    기대 경로는 최소 사슬만 적고, 주변 맥락은 거기 안 들어가기 때문이다.
+    그러니 절대값이 아니라 **설정을 바꿨을 때 어느 쪽으로 움직이는지**로 읽어야 한다.
+    근거 예산(config.json 의 evidence_budget)을 조일수록 정밀도가 오르고
+    재현율이 떨어진다. 그 맞바꿈을 보는 것이 이 숫자의 쓸모다.
+    """
     if not expected:
-        return None, []
+        return None, None, None, []
     got, missing = 0, []
     for h, r, t in expected:
         hit = any(r == er and node_match(h, eh) and node_match(t, et)
@@ -92,7 +107,10 @@ def path_recall(expected, evidence):
             got += 1
         else:
             missing.append([h, r, t])
-    return got / len(expected), missing
+    recall = got / len(expected)
+    precision = got / len(evidence) if evidence else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) else 0.0
+    return recall, precision, f1, missing
 
 
 # ── ① 정답률: LLM 심판 ─────────────────────────────────────────────────────
@@ -151,22 +169,27 @@ def main():
         if only and it["id"] != only:
             continue
         res = agent.ask(it["q"])
-        rec, missing = path_recall(it["expected_path"], res["evidence"])
+        rec, prec, f1, missing = path_scores(it["expected_path"], res["evidence"])
         g_ok = judge(it["q"], it["expected_answer"], res["answer"])
         b_ans, b_docs = basic_rag(it["q"])
         b_ok = judge(it["q"], it["expected_answer"], b_ans)
         layer = None if g_ok else failure_layer(it, res, rec)
         rows.append({"id": it["id"], "kind": it["kind"], "hops": it["hops"], "q": it["q"],
                      "graph_ok": g_ok, "basic_ok": b_ok,
-                     "path_recall": rec, "missing_edges": missing, "layer": layer,
+                     "path_recall": rec, "path_precision": prec, "path_f1": f1,
+                     "n_evidence": len(res["evidence"]),
+                     "missing_edges": missing, "layer": layer,
                      "graph_answer": res["answer"], "basic_answer": b_ans,
                      "route": res["route"], "seeds": res["seeds"],
                      "path": res["path"], "sources": res["sources"],
                      "basic_docs": b_docs, "flags": res["flags"]})
         mark = "O" if g_ok else "X"
-        print("[%s] %s %d홉 | GraphRAG %s · BM25 %s | 경로재현 %s%s"
+        print("[%s] %s %d홉 | GraphRAG %s · BM25 %s | 경로 재현 %s 정밀 %s F1 %s | 근거 %d개%s"
               % (it["id"], it["kind"], it["hops"], mark, "O" if b_ok else "X",
                  "-" if rec is None else "%.0f%%" % (rec * 100),
+                 "-" if prec is None else "%.0f%%" % (prec * 100),
+                 "-" if f1 is None else "%.2f" % f1,
+                 len(res["evidence"]),
                  "" if g_ok else " · 실패층 " + layer))
 
     os.makedirs(OUT, exist_ok=True)
@@ -175,15 +198,20 @@ def main():
 
     print("")
     print("=" * 62)
-    print("%-10s %6s %10s %8s %s" % ("홉", "문항", "GraphRAG", "BM25", "경로재현율"))
+    print("%-8s %5s %9s %7s %8s %8s %6s %7s"
+          % ("홉", "문항", "GraphRAG", "BM25", "경로재현", "경로정밀", "F1", "근거수"))
     for hop in sorted({r["hops"] for r in rows}):
         sub = [r for r in rows if r["hops"] == hop]
         recs = [r["path_recall"] for r in sub if r["path_recall"] is not None]
-        print("%-10s %6d %9d/%d %7d/%d %9s"
+        pres = [r["path_precision"] for r in sub if r["path_precision"] is not None]
+        f1s = [r["path_f1"] for r in sub if r["path_f1"] is not None]
+        avg = lambda xs, f: "-" if not xs else f % (sum(xs) / len(xs))
+        print("%-8s %5d %8d/%d %6d/%d %8s %8s %6s %7.1f"
               % ("전역" if hop == 0 else "%d홉" % hop, len(sub),
                  sum(r["graph_ok"] for r in sub), len(sub),
                  sum(r["basic_ok"] for r in sub), len(sub),
-                 "-" if not recs else "%.0f%%" % (100 * sum(recs) / len(recs))))
+                 avg(recs, "%.0f%%"), avg(pres, "%.0f%%"), avg(f1s, "%.2f"),
+                 sum(r["n_evidence"] for r in sub) / len(sub)))
     print("-" * 62)
     print("%-10s %6d %9d/%d %7d/%d"
           % ("합계", len(rows), sum(r["graph_ok"] for r in rows), len(rows),
