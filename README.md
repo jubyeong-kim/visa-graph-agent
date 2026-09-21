@@ -25,6 +25,8 @@ streamlit run app.py          # 그래프는 이미 들어 있어 바로 뜬다
                                         그래도 없으면 "모른다"
 ```
 
+![데모 화면](docs/demo.png)
+
 ## 이 질문에 답할 수 있다
 
 > **"E-7 비자인데 영주권을 받으려면 한국어는 어떻게 준비하나요?"**
@@ -195,7 +197,8 @@ python agent.py "E-9 비자인데 영주권까지 갈 수 있나요?"
 | `agent.py` | LangGraph 에이전트 — 세 갈래 라우팅, 경로 기록, 숫자 검증 |
 | `evaluate.py` | 홉수별 채점 · BM25 대조 · 경로 재현·정밀·F1 · 실패 층 분류 |
 | `app.py` | streamlit 데모 |
-| `test_rules.py` | 규칙·정규화 자체 검사 |
+| `test_rules.py` · `test_traversal.py` | 자체 검사 (LLM 없이 돈다) |
+| `sweep.py` · `probe_faq.py` · `capture_demo.py` | 근거 상한 쓸기 · 외부 질문 찔러보기 · 데모 캡처 |
 | `config.json` | 스키마·반경·허브 차단·근거 예산·별칭과 **합치지 않은 이유** |
 | [REPORT.md](REPORT.md) | 설계 판단, 측정 결과, 실패 분석, 회고 |
 

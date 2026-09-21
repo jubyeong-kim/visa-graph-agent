@@ -83,8 +83,22 @@ for i, (tag, q) in enumerate(EXAMPLES):
                           use_container_width=True):
         picked = q
 
-q = st.text_input("질문", value=picked or "", placeholder="예: E-9 비자인데 영주권까지 갈 수 있나요?")
-go = st.button("물어보기", type="primary") or bool(picked)
+# 예시 버튼이 눌리면 입력칸에 **써 넣는다**. st.text_input 의 `value=` 는 최초 1회만
+# 반영되므로, 그것만 믿으면 버튼을 눌러도 칸이 빈 채로 남아 아무 일도 일어나지 않는다.
+# 실제로 그랬다 — 버튼이 전부 죽어 있었는데 오류도 안 났다.
+if picked:
+    st.session_state["q"] = picked
+
+# 주소에 ?q=... 로 질문을 실어 올 수 있다. 링크로 답을 공유할 수 있고,
+# 헤드리스 브라우저로 화면을 캡처할 때도 이 경로가 필요하다
+# (헤드리스는 버튼을 누를 수 없다).
+_url_q = st.query_params.get("q")
+if _url_q and "q" not in st.session_state:
+    st.session_state["q"] = _url_q
+
+q = st.text_input("질문", key="q",
+                  placeholder="예: E-9 비자인데 영주권까지 갈 수 있나요?")
+go = st.button("물어보기", type="primary") or bool(picked) or bool(_url_q)
 
 if go and q.strip():
     agent = boot()

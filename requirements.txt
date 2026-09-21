@@ -9,3 +9,4 @@ rank_bm25        # basic RAG 베이스라인
 rapidfuzz        # 표기 정규화
 tiktoken
 streamlit
+playwright        # capture_demo.py 만 쓴다. 이미 깔린 크롬을 재사용한다
