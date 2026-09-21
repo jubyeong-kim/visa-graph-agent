@@ -112,6 +112,70 @@ def rule_triples(docs):
             out.append((m.group(1), "REQUIRES", "영주자격(%s)" % m.group(2), "rule", title))
             out.append(("영주자격(%s)" % m.group(2), "SATISFIED_BY", m.group(2), "rule", title))
 
+    # 기한·기간 요건. 골든셋을 12 → 30문항으로 늘리자마자 이게 **한 부류 전체**로
+    # 안 뽑히고 있다는 것이 드러났다 — 12문항에서는 「체류기간연장」 하나로만 보였다.
+    #   "입국한 날부터 90일을 초과하여 체류"  "사유가 발생한 날로부터 15일 이내"
+    #   "만료하기 전 4개월부터 만료 당일까지"  "국내 3년 이상 체류"
+    # 사용자가 가장 자주 묻는 축인데 LLM 이 계속 흘렸다. 프롬프트로 한 번 시켜 봤지만
+    # 안 들었다. 문장 모양이 일정하므로 규칙으로 내린다.
+    #
+    # 잡음을 두 겹으로 막는다. 행위(신청·신고·체류…)가 없는 줄은 버리고,
+    # 보존기간·수수료·벌금처럼 요건이 아닌 기간도 버린다. 58줄 → 40줄로 걸러진다.
+    # "만료하기 전 4개월부터" 처럼 **숫자 앞에** 전/이후가 오는 꼴도 잡아야 한다.
+    # 이걸 놓쳐서 체류기간연장 기한이 계속 안 뽑혔다.
+    per_subj = Counter()
+    PERIOD = re.compile(r"(?:(전|이후)\s*)?(\d+\s*(?:일|개월|년))\s*"
+                        r"(이내|이상|초과|미만|전부터|부터|까지)")
+    ACT = re.compile(r"신청|신고|등록|체류|거주|이수|허가|받아야|하여야")
+    NOT_REQ = re.compile(r"보존|수수료|과태료|벌금|징역|유효기간|발급일")
+    # 주어 고르기가 이 규칙의 전부다. 처음엔 문서 제목을 그냥 썼다가
+    #   (외국인등록) -[REQUIRES]-> (15일 이내)      ← 주어는 외국인등록'사항변경신고'
+    #   (국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서…) -[REQUIRES]-> …
+    # 처럼 엉뚱한 것이 나왔다. 문장 안에 적힌 절차 이름을 먼저 쓴다.
+    # 귀화 유형(일반귀화·간이귀화·혼인귀화)도 절차 이름이다. 빠뜨려서
+    # "간이귀화는 몇 년?" 에 답을 못 했다.
+    PROC = re.compile(r"[가-힣·]{2,14}(?:신고|허가|신청|등록|연장|변경|이수|평가|귀화)")
+    IS_ART = re.compile(r"제\d+조")
+    titles = {t for t in docs if "별표" not in t and not IS_ART.search(t)}
+    for title, body in docs.items():
+        for line in body.splitlines():
+            line = line.strip()
+            # 줄 전체로 거르면 안 된다. 서식은 1만 2천 자가 한 줄이라
+            # 어딘가의 "수수료" 하나 때문에 줄 전체가 날아간다 — 실제로 혼인귀화가
+            # 그렇게 사라졌다. 매치 **주변**만 보고 판단한다.
+            if not ACT.search(line):
+                continue
+            # 서식은 한 줄에 여러 요건이 몰려 있다("일반귀화 … 5년 … 간이귀화 … 3년 …").
+            # 줄당 첫 매치만 보면 뒤의 것이 통째로 사라진다. 매치마다 **바로 앞에 나온**
+            # 절차 이름을 주어로 삼는다.
+            procs_at = [(m.start(), m.group(0)) for m in PROC.finditer(line)
+                        if len(m.group(0)) >= 4]
+            for m in PERIOD.finditer(line):
+                near = line[max(0, m.start() - 60):m.end() + 60]
+                if NOT_REQ.search(near) or not ACT.search(near):
+                    continue
+                # 바로 앞이라도 **너무 멀면** 남의 요건이다. 1만 2천 자짜리 폼에서
+                # 거리 제한 없이 집었더니 주어가 전부 `외국인등록` 으로 쏠렸다.
+                before = [p for pos, p in procs_at
+                          if 0 < m.start() - pos <= 80]
+                if before:
+                    subj = before[-1]
+                else:
+                    other = [t for t in titles if len(t) >= 4 and t in line]
+                    if other:
+                        subj = max(other, key=len)
+                    elif IS_ART.search(title) or "별표" in title:
+                        continue      # 법령 조문·서식은 제목이 절차명이 아니다
+                    else:
+                        subj = title
+                cond = re.sub(r"\s+", " ", m.group(0)).strip()
+                # 한 절차에 기한이 일곱 개씩 붙으면 그건 남의 것을 끌어온 것이다.
+                # `외국인등록` 이 실제로 7개를 달고 근거를 독점했다.
+                if per_subj[subj] >= 3:
+                    continue
+                per_subj[subj] += 1
+                out.append((subj, "REQUIRES", cond, "rule", title))
+
     # 하이코리아 안내문은 문서 제목이 곧 절차 이름이고("체류기간연장"),
     # 본문에 "관할 출입국관리사무소에 신청" 이라고 적혀 있다. 창구를 묻는 질문이
     # 가장 흔한데 LLM 은 이걸 실행마다 놓쳤다 — 실제로 체류기간연장은 노드조차
