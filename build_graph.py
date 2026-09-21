@@ -184,13 +184,15 @@ DOMAIN_RULES = """
 
 def extract_llm(docs):
     from langchain_core.documents import Document
-    from langchain_openai import ChatOpenAI
     from langchain_experimental.graph_transformers import LLMGraphTransformer
 
+    from llm import chat_model, model_id, require_key
+
+    require_key()
     os.makedirs(CACHE, exist_ok=True)
     m = CFG["model"]
-    llm = ChatOpenAI(model=m["chat"], temperature=0,
-                     timeout=m["timeout"], max_retries=m["retries"])
+    llm = chat_model("chat")
+    print("  모델:", model_id("chat"))
     tf = LLMGraphTransformer(
         llm=llm,
         allowed_nodes=CFG["schema"]["nodes"],
@@ -419,10 +421,9 @@ def summarize_communities(G, parts):
     전역 질문("이 자료에 어떤 갈래가 있나")은 상위 k개 문서로는 답할 수 없다.
     질문이 들어온 뒤에 만들면 느리고 비싸니 색인 시점에 만들어 캐시한다.
     """
-    from langchain_openai import ChatOpenAI
+    from llm import chat_model
 
-    llm = ChatOpenAI(model=CFG["model"]["chat"], temperature=0,
-                     timeout=CFG["model"]["timeout"], max_retries=CFG["model"]["retries"])
+    llm = chat_model("chat")
     out = []
     for i, members in enumerate(parts):
         S = set(members)

@@ -1,8 +1,15 @@
 {
   "domain": "대한민국 체류자격·정착 절차",
   "model": {
-    "chat": "gpt-4.1-mini",
-    "judge": "gpt-4.1",
+    "provider": "anthropic",
+    "anthropic": {
+      "chat": "claude-sonnet-5",
+      "judge": "claude-opus-5"
+    },
+    "openai": {
+      "chat": "gpt-4.1-mini",
+      "judge": "gpt-4.1"
+    },
     "timeout": 120,
     "retries": 3,
     "workers": 8

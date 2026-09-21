@@ -134,7 +134,7 @@ JUDGE = """너는 채점자다. 답변이 기대 정답과 사실상 같은 내�
 
 
 def judge(q, gold, ans):
-    v = llm(agent.CFG["model"]["judge"]).invoke(
+    v = llm("judge").invoke(
         JUDGE.format(q=q, gold=gold, ans=ans)).content.strip().upper()
     return v.startswith("O")
 

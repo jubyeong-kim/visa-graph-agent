@@ -1,6 +1,7 @@
 requests
 olefile          # 법령 별표 HWP 본문 추출 (순수 파이썬)
 networkx         # 지식 그래프. 노드 수백 개 규모라 그래프 DB 불필요
+langchain-anthropic  # config.json 의 model.provider 로 고른다
 langchain-openai
 langchain-experimental   # LLMGraphTransformer
 langgraph

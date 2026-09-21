@@ -31,7 +31,6 @@ import sys
 from typing import Any, TypedDict
 
 import networkx as nx
-from langchain_openai import ChatOpenAI
 from langgraph.graph import END, START, StateGraph
 from rapidfuzz import fuzz
 
@@ -47,10 +46,9 @@ COMMUNITIES = json.load(open("output/communities.json", encoding="utf-8"))
 HUBS = set(TRV["hub_blocklist"])
 
 
-def llm(model=None):
-    m = CFG["model"]
-    return ChatOpenAI(model=model or m["chat"], temperature=0,
-                      timeout=m["timeout"], max_retries=m["retries"])
+def llm(role="chat"):
+    from llm import chat_model
+    return chat_model(role)
 
 
 # ── 조회 계층 ──────────────────────────────────────────────────────────────
