@@ -69,7 +69,6 @@
   "traversal": {
     "max_hops": 3,
     "deepen_limit": 2,
-    "hub_percentile": 0.95,
     "hub_blocklist": [
       "대한민국",
       "외국인",
@@ -79,14 +78,17 @@
       "출입국관리법"
     ],
     "evidence_budget": {
-      "CONVERTS_TO": 12,
-      "REQUIRES": 8,
-      "SATISFIED_BY": 6,
-      "_default": 4,
-      "SUBMITS": 10,
-      "HANDLED_BY": 10,
-      "ALLOWS": 10
-    }
+      "CONVERTS_TO": 8,
+      "REQUIRES": 6,
+      "SATISFIED_BY": 4,
+      "HANDLED_BY": 4,
+      "SUBMITS": 4,
+      "ALLOWS": 4,
+      "_default": 3
+    },
+    "per_node_cap": 5,
+    "evidence_cap": 18,
+    "hub_degree": 12
   },
   "normalize": {
     "aliases": {

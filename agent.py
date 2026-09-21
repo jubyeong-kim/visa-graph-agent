@@ -97,11 +97,25 @@ def find_entities(q):
         elif len(n) >= 6 and n.replace(" ", "") in q.replace(" ", ""):
             named.append((len(n), n))
     seeds += [n for _, n in sorted(named, reverse=True)]
-    if not seeds:                      # 이름이 안 걸리면 느슨하게 한 번 더
+    # 이름이 그대로 안 박혀 있어도 잡아야 한다. "외국인등록 사항이 바뀌면 신고할 때"는
+    # 노드 `외국인등록사항변경 신고의무` 를 가리키는데, 부분일치 점수로는 더 짧고 정확한
+    # `외국인등록`(100점)에 밀려 안 잡혔다. 노드 글자가 질문에 얼마나 들어 있는지로 재면
+    # 긴 이름이 제 점수를 받는다. 짧은 이름은 우연히 높게 나오므로 길이로 거른다.
+    qs = re.sub(r"\s", "", q)
+    extra = []
+    for n in G.nodes:
+        if n in seeds or n in HUBS or len(re.sub(r"\s", "", n)) < 8:
+            continue
+        chars = set(re.sub(r"\s", "", n))
+        if sum(1 for c in chars if c in qs) / len(chars) >= 0.75:
+            extra.append((len(n), n))
+    seeds += [n for _, n in sorted(extra, reverse=True)[:2]]
+
+    if not seeds:                      # 그래도 없으면 느슨하게 한 번 더
         best = max(G.nodes, key=lambda n: fuzz.partial_ratio(n, q), default=None)
         if best and fuzz.partial_ratio(best, q) >= 85:
             seeds.append(best)
-    return list(dict.fromkeys(seeds))[:4]
+    return list(dict.fromkeys(seeds))[:5]
 
 
 # ── State ──────────────────────────────────────────────────────────────────
@@ -139,37 +153,97 @@ def find_seeds(state: S) -> S:
     return {"seeds": find_entities(state["question"])}
 
 
-def expand(state: S) -> S:
-    """시작 개체에서 n홉까지 넓히며 근거를 모은다. 실제로 탄 경로를 기록한다."""
-    budget = TRV["evidence_budget"]
-    max_hops = min(TRV["max_hops"], 1 + state.get("deepened", 0) + 1)
-    seen_edges = set(tuple(e[:3]) for e in state.get("evidence", []))
-    evidence = list(state.get("evidence", []))
-    path = list(state.get("path", []))
-    used = {}
+SPINE = {"CONVERTS_TO", "REQUIRES", "SATISFIED_BY"}
+HUB_DEGREE = TRV.get("hub_degree", 12)
 
-    frontier = [(s, 0) for s in state.get("seeds", [])]
-    visited = set(state.get("seeds", []))
+
+def is_hub(n, seeds):
+    """차수가 큰 노드에서는 더 뻗어 나가지 않는다. **도착은 하되 통과는 안 한다.**
+
+    `지방출입국·외국인관서의 장` 같은 기관 노드는 수십 개 절차가 가리킨다. 거기서
+    한 발 더 나가면 난민여행증명서처럼 질문과 무관한 절차가 딸려 온다.
+
+    다만 차수만으로 자르면 안 된다. `F-5`(영주)도 차수 20인데, 거기서 못 나가면
+    영주 경로가 통째로 끊긴다 — 이 도메인에서 가장 중요한 길이다.
+    체류자격과 시작 개체는 차수가 커도 통과시킨다.
+    """
+    if n in seeds or VISA_CODE.fullmatch(n):
+        return False
+    return G.degree(n) >= HUB_DEGREE
+
+
+def relevance(h, r, t, hop, qtokens, seeds):
+    """이 삼중항을 근거로 낼 가치. 높을수록 먼저 담는다.
+
+    측정해 보니 재현율은 홉이 깊어질수록 올랐는데(67→100%) 정밀도는 8~9% 에 붙박이고
+    근거 수만 9→34개로 불어났다. 3홉 질문에 34개를 퍼와서 3개만 썼다.
+    구조만 보고 퍼오면 이렇게 된다 — 질문을 보고 골라야 한다.
+    """
+    s = 3.0 / hop                                   # 가까울수록 좋다
+    if r in SPINE:
+        s += 2.0                                    # 멀티홉의 척추
+    if h in seeds or t in seeds:
+        s += 1.0                                    # 물어본 대상에 직접 붙어 있다
+    for n in (h, t):
+        lb = G.nodes.get(n, {}).get("label", "")
+        if any(w in n or (lb and w in lb) for w in qtokens):
+            s += 1.5                                # 질문에 나온 말과 겹친다
+            break
+    return s
+
+
+def expand(state: S) -> S:
+    """시작 개체에서 n홉까지 걷고, 그중 **골라서** 근거로 낸다.
+
+    걷는 것과 보여 주는 것을 분리한다. 길을 찾으려면 지나가야 하지만, 지나갔다고
+    그 노드의 엣지를 전부 근거로 낼 이유는 없다. 차수 20짜리 노드 하나에 닿았다고
+    20개를 담으면 생성 모델이 관계없는 삼중항을 읽느라 답을 놓친다 (실제로 h2-6 이
+    그랬다 — 재현율 100% 인데 잡음에 묻혀 "자료에 없다"고 답했다).
+    """
+    budget = TRV["evidence_budget"]
+    per_node = TRV.get("per_node_cap", 5)
+    total = TRV.get("evidence_cap", 18)
+    max_hops = min(TRV["max_hops"], 1 + state.get("deepened", 0) + 1)
+    seeds = state.get("seeds", [])
+    qtokens = [w for w in re.split(r"[\s,.?!·]+", state["question"]) if len(w) >= 2]
+
+    # ── 걷기: 후보를 모은다 (여기서는 자르지 않는다) ──────────────────────
+    cand, seen = [], set()
+    frontier = [(s, 0) for s in seeds]
+    visited = set(seeds)
     while frontier:
         node, hop = frontier.pop(0)
         if hop >= max_hops:
             continue
-        for h, r, t, d in neighbors(node):
-            key = (h, r, t)
-            if key in seen_edges:
-                continue
-            cap = budget.get(r, budget["_default"])
-            if used.get(r, 0) >= cap:
-                continue
-            seen_edges.add(key)
-            used[r] = used.get(r, 0) + 1
-            evidence.append([h, r, t, d.get("sources", d.get("source", "")), hop + 1])
-            path.append([label(h), r, label(t)])
+        here = 0
+        for h, r, t, d in sorted(neighbors(node),
+                                 key=lambda e: -relevance(e[0], e[1], e[2],
+                                                          hop + 1, qtokens, seeds)):
             nxt = t if h == node else h
             # 허브는 지나가지 않는다. 한 번 들어가면 온 그래프가 딸려 나온다.
-            if nxt not in visited and nxt not in HUBS:
+            if nxt not in visited and nxt not in HUBS and not is_hub(nxt, seeds):
                 visited.add(nxt)
                 frontier.append((nxt, hop + 1))
+            key = (h, r, t)
+            if key in seen or here >= per_node:      # 한 노드가 근거를 독점하지 않게
+                continue
+            seen.add(key)
+            here += 1
+            cand.append((relevance(h, r, t, hop + 1, qtokens, seeds),
+                         [h, r, t, d.get("sources", d.get("source", "")), hop + 1]))
+
+    # ── 고르기: 관계별 예산 안에서, 점수 높은 것부터 상한까지 ──────────────
+    used, evidence = {}, []
+    for _score, e in sorted(cand, key=lambda x: -x[0]):
+        if len(evidence) >= total:
+            break
+        cap = budget.get(e[1], budget["_default"])
+        if used.get(e[1], 0) >= cap:
+            continue
+        used[e[1]] = used.get(e[1], 0) + 1
+        evidence.append(e)
+
+    path = [[label(h), r, label(t)] for h, r, t, _s, _hop in evidence]
     return {"evidence": evidence, "path": path, "depth": max_hops}
 
 
