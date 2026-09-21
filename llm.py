@@ -11,6 +11,23 @@ Opus 5 · Sonnet 5 · Fable 5 에서 샘플링 파라미터가 제거됐다. Ope
 import json
 import os
 
+
+def load_env(path=".env"):
+    """.env 를 읽어 환경변수로 올린다. python-dotenv 를 더 깔 이유가 없다.
+
+    자격증명이 필요한 모듈이 직접 읽는다. 다른 파일을 거쳐야만 로드되는 구조였을 때
+    llm 을 단독으로 임포트하면 키를 못 찾아 엉뚱한 인증 오류가 났다.
+    """
+    if not os.path.exists(path):
+        return
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip())
+
+
+load_env()
 CFG = json.load(open("config.json", encoding="utf-8"))
 M = CFG["model"]
 PROVIDER = M.get("provider", "openai")

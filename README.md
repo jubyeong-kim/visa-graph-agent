@@ -5,7 +5,7 @@
 ```bash
 git clone https://github.com/jubyeong-kim/visa-graph-agent && cd visa-graph-agent
 pip install -r requirements.txt
-cp .env.example .env          # ANTHROPIC_API_KEY 를 채운다
+cp .env.example .env          # OPENAI_API_KEY 를 채운다
 streamlit run app.py          # 그래프는 이미 들어 있어 바로 뜬다
 ```
 
@@ -84,11 +84,17 @@ E-7(특정활동) --[CONVERTS_TO]--> F-5(영주)
 
 | provider | 추출·답변 | 심판 |
 |---|---|---|
-| `anthropic` (현재) | `claude-sonnet-5` | `claude-opus-5` |
-| `openai` | `gpt-4.1-mini` | `gpt-4.1` |
+| `openai` (현재) | `gpt-4.1-mini` | `gpt-4.1` |
+| `anthropic` | `claude-sonnet-5` | `claude-opus-5` |
 
-주의: **Claude 5 세대는 `temperature` 를 거부한다(400).** 샘플링 파라미터가 제거됐다.
-그래서 결정성을 파라미터로 잡지 않고 `output/cache/` 로 잡는다.
+Claude 로 바꿀 때 걸리는 것 두 가지:
+
+- **Claude 5 세대는 `temperature` 를 거부한다(400).** 샘플링 파라미터가 제거됐다.
+  `llm.py` 가 제공자별로 갈라 막는다.
+- **`langchain-anthropic` 은 `api_key=''`(빈 문자열)을 명시적으로 넘긴다.**
+  그래서 `ant auth login` 으로 만든 OAuth 프로필을 쓰지 못한다 — 빈 키가
+  자격증명 해석 순서에서 이겨 버려, 빈 키를 그대로 전송하고 인증에 실패한다.
+  Claude 를 쓰려면 `ANTHROPIC_API_KEY` 가 있어야 한다.
 
 ## 성능
 

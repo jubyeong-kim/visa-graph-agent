@@ -1,7 +1,7 @@
 {
   "domain": "대한민국 체류자격·정착 절차",
   "model": {
-    "provider": "anthropic",
+    "provider": "openai",
     "anthropic": {
       "chat": "claude-sonnet-5",
       "judge": "claude-opus-5"

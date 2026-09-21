@@ -20,16 +20,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import networkx as nx
 
-def load_env(path=".env"):
-    """.env 를 읽어 환경변수로 올린다. python-dotenv 를 더 깔 이유가 없다."""
-    if not os.path.exists(path):
-        return
-    for line in open(path, encoding="utf-8"):
-        line = line.strip()
-        if line and not line.startswith("#") and "=" in line:
-            k, v = line.split("=", 1)
-            os.environ.setdefault(k.strip(), v.strip())
-
+from llm import load_env
 
 load_env()
 CFG = json.load(open("config.json", encoding="utf-8"))
