@@ -63,6 +63,42 @@ E-7(특정활동) --[CONVERTS_TO]--> F-5(영주)
 `체류자격별 안내 매뉴얼(.hwp)` 은 **쓰지 않았다** — 그래프로 가공하는 것이 변경에
 해당할 수 있다.
 
+## 스키마
+
+굵은 화살표가 **멀티홉의 척추**다. 괄호 안은 실제로 뽑힌 엣지 수 —
+`config.json` 과 그래프에서 자동 생성하므로 그림만 옛날 것으로 남는 일이 없다
+(`python make_views.py`).
+
+```mermaid
+graph LR
+  Visa["Visa<br/>체류자격"]
+  Procedure["Procedure<br/>절차"]
+  Requirement["Requirement<br/>요건"]
+  Organization["Organization<br/>기관"]
+  Program["Program<br/>제도"]
+  Document["Document<br/>서류"]
+
+  Visa ==>|"CONVERTS_TO (16)"| Visa
+  Visa ==>|"REQUIRES (40)"| Requirement
+  Visa -->|"ALLOWS (46)"| Procedure
+  Procedure -->|"HANDLED_BY (95)"| Organization
+  Procedure -->|"SUBMITS (71)"| Document
+  Requirement ==>|"SATISFIED_BY (3)"| Program
+  Program -->|"OPERATED_BY (1)"| Organization
+  Visa -->|"PRECEDES (0)"| Visa
+
+  style Visa fill:#1f4e79,color:#fff,stroke:none
+  style Procedure fill:#2e7d32,color:#fff,stroke:none
+  style Requirement fill:#b45309,color:#fff,stroke:none
+  style Organization fill:#6b21a8,color:#fff,stroke:none
+  style Program fill:#0e7490,color:#fff,stroke:none
+  style Document fill:#64748b,color:#fff,stroke:none
+```
+
+
+**동적 그래프**: `python make_views.py` → `output/graph.html` 을 브라우저로 열면
+검색·관계 필터·"척추만 보기"로 직접 둘러볼 수 있다. 데모 화면 맨 아래에도 붙어 있다.
+
 ## 나가는 길이 셋이다
 
 | 길 | 언제 | 무엇으로 답하나 |

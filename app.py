@@ -126,3 +126,15 @@ if go and q.strip():
     os.makedirs("output", exist_ok=True)
     with open("output/runs.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+
+# ── 지식 그래프 둘러보기 ────────────────────────────────────────────────────
+# 답변만 보면 이 에이전트가 무엇 위에서 도는지 알 수 없다. 그래프를 직접 만져 보면
+# "왜 이 답이 나왔는지"가 아니라 "무엇까지 답할 수 있는지"가 보인다.
+st.divider()
+with st.expander("지식 그래프 둘러보기 — 검색 · 관계 필터 · 척추만 보기"):
+    if os.path.exists("output/graph.html"):
+        import streamlit.components.v1 as components
+        components.html(open("output/graph.html", encoding="utf-8").read(), height=620)
+    else:
+        st.caption("`python make_views.py` 를 돌리면 생깁니다.")

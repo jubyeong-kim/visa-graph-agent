@@ -360,9 +360,18 @@ def after_route(state: S):
 def after_expand(state: S):
     if state.get("evidence"):
         return "build"
+    # 시작 개체를 **아예 못 찾았으면** 전역으로 보내지 않는다. 그냥 모르는 질문이다.
+    #
+    # 이걸 몰라서 사고가 났다. 외부 질문 "Smart Entry Service란?" 에 근거 0개로
+    # "전자 출입국 시스템입니다" 라고 지어냈다. 코퍼스에 없는 내용이다.
+    # 전역 요약이 컨텍스트에 들어가면 모델은 `체류신고제도` 같은 추상적인 무리 제목을
+    # 근거 삼아 그럴듯한 말을 만든다. expand → global 은 "시작 개체는 찾았는데
+    # 그 주변에 근거가 없는" 경우를 구제하려던 것이지, 개체조차 못 찾은 질문을
+    # 받아 주려던 게 아니다.
+    if not state.get("seeds"):
+        return "build"                      # 빈 근거 → synthesize 가 "모른다"
     if state.get("deepened", 0) < TRV["deepen_limit"]:
         return "deepen"
-    # 넓혀도 없으면 전역으로 흘려보낸다. 1홉인 줄 알았는데 전역 질문이었던 경우다.
     return "global"
 
 

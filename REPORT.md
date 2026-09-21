@@ -77,12 +77,39 @@
 관계는 **삼중항 튜플로 방향까지 고정**했다. 문자열로만 주면 `(사람, 출연, 영화)`인지
 `(영화, 출연, 사람)`인지 정해지지 않아 문서마다 방향이 뒤집힌 엣지가 생긴다.
 
-```python
-("Visa", "CONVERTS_TO", "Visa")          # 전환 ← 멀티홉의 척추
-("Visa", "REQUIRES", "Requirement")
-("Requirement", "SATISFIED_BY", "Program")  # 한국어 요건이 여기 붙는다
-...
+```mermaid
+graph LR
+  Visa["Visa<br/>체류자격"]
+  Procedure["Procedure<br/>절차"]
+  Requirement["Requirement<br/>요건"]
+  Organization["Organization<br/>기관"]
+  Program["Program<br/>제도"]
+  Document["Document<br/>서류"]
+
+  Visa ==>|"CONVERTS_TO (16)"| Visa
+  Visa ==>|"REQUIRES (40)"| Requirement
+  Visa -->|"ALLOWS (46)"| Procedure
+  Procedure -->|"HANDLED_BY (95)"| Organization
+  Procedure -->|"SUBMITS (71)"| Document
+  Requirement ==>|"SATISFIED_BY (3)"| Program
+  Program -->|"OPERATED_BY (1)"| Organization
+  Visa -->|"PRECEDES (0)"| Visa
+
+  style Visa fill:#1f4e79,color:#fff,stroke:none
+  style Procedure fill:#2e7d32,color:#fff,stroke:none
+  style Requirement fill:#b45309,color:#fff,stroke:none
+  style Organization fill:#6b21a8,color:#fff,stroke:none
+  style Program fill:#0e7490,color:#fff,stroke:none
+  style Document fill:#64748b,color:#fff,stroke:none
 ```
+
+굵은 화살표가 멀티홉의 척추다. 괄호 안은 실제로 뽑힌 엣지 수 — 이 그림은
+`config.json` 과 `output/graph.graphml` 에서 자동 생성한다(`python make_views.py`).
+손으로 그리면 스키마를 고쳤을 때 그림만 옛날 것으로 남는다.
+
+`PRECEDES` 가 0개인 것이 그대로 보인다. 스키마에 선언했지만 한 건도 안 뽑혔다 —
+**선언한 관계가 다 쓰이는 것은 아니다.** 지우지 않고 남긴 것은 영주 요건에
+"직전 체류자격" 조건이 있어 나중에 규칙으로 채울 자리이기 때문이다.
 
 ### 뽑지 않기로 한 것과 그 대가
 
@@ -349,6 +376,44 @@ basic RAG 는 BM25 상위 3개 문서를 같은 생성 모델에 넣었다.
 그리고 **BM25 3홉 성적이 실행 사이에 1 → 0 으로 바뀌었다.** 내 수정은 BM25 쪽을
 건드리지 않았으므로 이건 순전히 같은 설정의 실행 간 흔들림이다. **12문항에서 한 문항은
 8%p** 다. 이 숫자들은 경향을 보여 줄 뿐 우열을 증명하지 않는다.
+
+### 외부 질문으로 찔러 보기 — 내가 못 만드는 질문
+
+골든셋 12문항은 **전부 내가 썼다.** 그래서 `E-7` 같은 코드로만 물었고, 내 사각지대가
+그대로 남았다. 하이코리아 「자주묻는질문(FAQ)」에서 **실제 사용자 질문 14건**을 받아
+찔러 봤다 (`probe_faq.py`). 사이트의 답변 표시가 고장나 있어 정답은 못 받았으므로
+채점이 아니라 **사람이 읽는 용도**다.
+
+**두 건이 근거 0개로 답을 지어냈다.**
+
+```
+[08] 이사를 하면 신고해야 하나요?      시작 개체 없음 · 근거 0개
+     "네, 이사를 하면 반드시 체류지 변경 신고를 해야 합니다…"
+
+[14] Smart Entry Service란?          시작 개체 없음 · 근거 0개
+     "…전자 출입국 시스템입니다"      ← 코퍼스에 없는 내용
+```
+
+이 프로젝트가 내세운 약속("근거 없으면 지어내지 않는다")을 정면으로 어긴 것이다.
+**골든셋 12문항으로는 절대 안 보였다.**
+
+원인은 내가 자랑했던 `expand → global` 엣지였다. 시작 개체를 **아예 못 찾았는데도**
+전역 요약으로 흘려보내니, 모델이 `체류신고제도` 같은 추상적인 커뮤니티 제목을 근거 삼아
+그럴듯한 말을 만들었다. 그 엣지는 "시작 개체는 찾았는데 그 주변에 근거가 없는" 경우를
+구제하려던 것이지, **개체조차 못 찾은 질문을 받아 주려던 게 아니었다.** 갈라서 막았다.
+
+[08] 은 한 겹 더 있었다. `체류지 변경신고` 노드가 **그래프에 실제로 있는데** 못 찾았다 —
+사람은 "이사"라 하고 문서는 "체류지 변경"이라 쓴다. 앞 프로젝트에서 「술」과 「주류」로
+겪은 것과 같은 구조다. 동의어로 이었고, 이제 근거를 대고 답한다.
+
+| | 고치기 전 | 고친 뒤 |
+|---|---|---|
+| 근거 0개인데 답한 건 | **2건** | **0건** |
+| 모른다고 답한 건 | 5건 | 8건 |
+| 골든셋 정답률 | 8/12 | 8/12 (회귀 없음) |
+
+"모른다"가 5 → 8건으로 늘어난 것은 나빠진 게 아니다. **모르면서 아는 척하던 것을
+멈춘 것**이다.
 
 ## 5. 데모
 
