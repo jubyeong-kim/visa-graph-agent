@@ -163,7 +163,15 @@ def failure_layer(item, res, recall):
 
 
 def main():
-    only = sys.argv[1] if len(sys.argv) > 1 else None
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    only = args[0] if args else None
+    # 근거 상한을 쓸어 볼 때 BM25 는 바뀌지 않는다. 다시 돌리면 돈만 쓰고
+    # 실행 간 흔들림만 더한다. 비교 실험에서는 끈다.
+    no_basic = "--no-basic" in sys.argv
+    for a in sys.argv[1:]:
+        if a.startswith("--cap="):
+            agent.TRV["evidence_cap"] = int(a.split("=")[1])
+            print("근거 상한:", agent.TRV["evidence_cap"])
     rows = []
     for it in GOLD["items"]:
         if only and it["id"] != only:
@@ -171,8 +179,11 @@ def main():
         res = agent.ask(it["q"])
         rec, prec, f1, missing = path_scores(it["expected_path"], res["evidence"])
         g_ok = judge(it["q"], it["expected_answer"], res["answer"])
-        b_ans, b_docs = basic_rag(it["q"])
-        b_ok = judge(it["q"], it["expected_answer"], b_ans)
+        if no_basic:
+            b_ans, b_docs, b_ok = "", [], False
+        else:
+            b_ans, b_docs = basic_rag(it["q"])
+            b_ok = judge(it["q"], it["expected_answer"], b_ans)
         layer = None if g_ok else failure_layer(it, res, rec)
         rows.append({"id": it["id"], "kind": it["kind"], "hops": it["hops"], "q": it["q"],
                      "graph_ok": g_ok, "basic_ok": b_ok,

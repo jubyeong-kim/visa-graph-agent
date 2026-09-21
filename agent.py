@@ -75,8 +75,19 @@ def neighbors(n):
             yield (u, d["relation"], n, d)
 
 
+VOCAB = CFG["normalize"].get("question_vocab", {})
+
+
 def find_entities(q):
-    """질문에서 시작 개체를 찾는다. 코드 → 정식 명칭 → 느슨한 이름 순."""
+    """질문에서 시작 개체를 찾는다. 코드 → 정식 명칭 → 느슨한 이름 순.
+
+    사람이 쓰는 말과 문서가 쓰는 말이 다르다. 사용자는 "알바"라고 하고 문서는
+    "체류자격외활동"이라고 쓴다. 문서 말을 **덧붙인다** — 원래 말은 지우지 않는다.
+    오른쪽 말은 그래프에 실제로 있는 것만 넣었다. 없는 말은 아무 효과가 없다.
+    """
+    for human, doc in VOCAB.items():
+        if human in q and doc not in q:
+            q += " " + doc
     seeds = []
     for m in VISA_CODE.finditer(q):
         code = re.sub(r"\s", "", m.group(0)).upper()
@@ -328,9 +339,15 @@ def verify(state: S) -> S:
            if re.sub(r"\s", "", n) not in re.sub(r"\s", "", ctx)]
     if not bad:
         return {}
+    # 처음에는 "그 부분을 '자료에서 확인되지 않습니다'로 바꿔라"라고 했다가
+    # "3년 이상 체류" → "자료에서 확인되지 않습니다 체류하고" 처럼 문장이 망가졌다.
+    # 모델이 숫자 자리에 문구를 그대로 끼워 넣는다. 통째로 다시 쓰게 해야 한다.
     fixed = llm().invoke(
-        "아래 답변에서 근거에 없는 숫자 %s 를 빼고 다시 써라. "
-        "그 부분은 '자료에서 확인되지 않습니다'로 바꿔라.\n\n답변:\n%s\n\n근거:\n%s"
+        "아래 답변에 근거로 뒷받침되지 않는 숫자 %s 가 들어 있다.\n"
+        "**답변 전체를 다시 써라.** 그 숫자가 들어간 문장은 지우고, 대신 마지막에 "
+        "'그 밖의 구체적인 수치는 제가 가진 자료로는 확인되지 않습니다.' 한 문장을 붙여라.\n"
+        "근거에 있는 사실은 그대로 살린다. 자연스러운 한국어 문장으로 써라.\n\n"
+        "답변:\n%s\n\n근거:\n%s"
         % (", ".join(bad), state["answer"], ctx)).content
     return {"answer": fixed.strip(), "flags": state.get("flags", []) + ["근거없는 숫자 재작성: %s" % bad]}
 
