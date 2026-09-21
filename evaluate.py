@@ -205,12 +205,15 @@ def main():
         recs = [r["path_recall"] for r in sub if r["path_recall"] is not None]
         pres = [r["path_precision"] for r in sub if r["path_precision"] is not None]
         f1s = [r["path_f1"] for r in sub if r["path_f1"] is not None]
-        avg = lambda xs, f: "-" if not xs else f % (sum(xs) / len(xs))
+        def avg(xs, fmt, scale=1):
+            return "-" if not xs else fmt % (scale * sum(xs) / len(xs))
+
         print("%-8s %5d %8d/%d %6d/%d %8s %8s %6s %7.1f"
               % ("전역" if hop == 0 else "%d홉" % hop, len(sub),
                  sum(r["graph_ok"] for r in sub), len(sub),
                  sum(r["basic_ok"] for r in sub), len(sub),
-                 avg(recs, "%.0f%%"), avg(pres, "%.0f%%"), avg(f1s, "%.2f"),
+                 avg(recs, "%.0f%%", 100), avg(pres, "%.0f%%", 100),
+                 avg(f1s, "%.2f"),
                  sum(r["n_evidence"] for r in sub) / len(sub)))
     print("-" * 62)
     print("%-10s %6d %9d/%d %7d/%d"
