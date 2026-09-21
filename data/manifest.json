@@ -1,0 +1,1018 @@
+{
+ "docs": [
+  {
+   "title": "동포 맞춤형 길라잡이",
+   "type": "Guide",
+   "chars": 671,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=7215&PARENT_ID=1585",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적업무일반",
+   "type": "Guide",
+   "chars": 2431,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2026&PARENT_ID=147",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "사증(VISA)",
+   "type": "Guide",
+   "chars": 1554,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=144&PARENT_ID=11",
+   "categories": [
+    "안내",
+    "A-1",
+    "A-3",
+    "B-1",
+    "B-2",
+    "C-3"
+   ]
+  },
+  {
+   "title": "사증발급인정서",
+   "type": "Guide",
+   "chars": 1592,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=272&PARENT_ID=132",
+   "categories": [
+    "안내",
+    "A-1",
+    "A-2",
+    "A-3",
+    "B-1",
+    "B-2",
+    "D-1",
+    "D-10",
+    "D-2",
+    "D-3",
+    "D-4",
+    "D-5",
+    "D-6",
+    "D-7",
+    "D-8",
+    "D-9",
+    "E-1",
+    "E-10",
+    "E-2",
+    "E-3",
+    "E-4",
+    "E-5",
+    "E-6",
+    "E-7",
+    "E-9",
+    "F-1",
+    "F-2",
+    "F-3",
+    "F-4",
+    "F-5",
+    "F-6",
+    "G-1",
+    "H-1",
+    "H-2"
+   ]
+  },
+  {
+   "title": "사증발급인정서 신청결과조회",
+   "type": "Guide",
+   "chars": 680,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2165&PARENT_ID=1250",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국제 결혼안내프로그램",
+   "type": "Guide",
+   "chars": 1196,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2179&PARENT_ID=1294",
+   "categories": [
+    "안내",
+    "F-6"
+   ]
+  },
+  {
+   "title": "국민출입국심사",
+   "type": "Guide",
+   "chars": 704,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=155&PARENT_ID=17",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "외국인출입국심사",
+   "type": "Guide",
+   "chars": 441,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=160&PARENT_ID=135",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "남북한왕래",
+   "type": "Guide",
+   "chars": 467,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=164&PARENT_ID=136",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "승무원/상륙허가",
+   "type": "Guide",
+   "chars": 900,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=166&PARENT_ID=137",
+   "categories": [
+    "안내",
+    "F-4",
+    "F-5"
+   ]
+  },
+  {
+   "title": "선반/여객기심사",
+   "type": "Guide",
+   "chars": 2049,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=169&PARENT_ID=138",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "체류일반",
+   "type": "Guide",
+   "chars": 854,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=170&PARENT_ID=19",
+   "categories": [
+    "안내",
+    "C-4",
+    "E-1",
+    "E-10",
+    "E-2",
+    "E-3",
+    "E-4",
+    "E-5",
+    "E-6",
+    "E-7",
+    "E-9",
+    "F-2",
+    "F-4",
+    "F-5",
+    "F-6",
+    "H-1"
+   ]
+  },
+  {
+   "title": "외국인등록",
+   "type": "Guide",
+   "chars": 631,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=176&PARENT_ID=139",
+   "categories": [
+    "안내",
+    "D-1",
+    "D-6",
+    "F-1",
+    "F-3",
+    "G-1"
+   ]
+  },
+  {
+   "title": "체류기간연장",
+   "type": "Guide",
+   "chars": 441,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=181&PARENT_ID=140",
+   "categories": [
+    "안내",
+    "F-6"
+   ]
+  },
+  {
+   "title": "체류자격변경",
+   "type": "Guide",
+   "chars": 782,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=184&PARENT_ID=141",
+   "categories": [
+    "안내",
+    "A-1",
+    "A-2",
+    "A-3",
+    "C-3",
+    "D-2",
+    "D-4",
+    "D-8",
+    "F-6"
+   ]
+  },
+  {
+   "title": "체류자격외활동",
+   "type": "Guide",
+   "chars": 884,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=187&PARENT_ID=142",
+   "categories": [
+    "안내",
+    "D-2",
+    "D-6",
+    "E-1"
+   ]
+  },
+  {
+   "title": "근무처변경/추가",
+   "type": "Guide",
+   "chars": 1269,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=189&PARENT_ID=143",
+   "categories": [
+    "안내",
+    "D-1",
+    "D-2",
+    "D-3",
+    "D-4",
+    "D-5",
+    "D-6",
+    "D-7",
+    "D-8",
+    "D-9",
+    "E-6",
+    "E-6-2"
+   ]
+  },
+  {
+   "title": "체류자격부여",
+   "type": "Guide",
+   "chars": 961,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=191&PARENT_ID=144",
+   "categories": [
+    "안내",
+    "A-1",
+    "A-2",
+    "A-3",
+    "C-3",
+    "F-1",
+    "F-2",
+    "F-3",
+    "F-5",
+    "G-1"
+   ]
+  },
+  {
+   "title": "재입국허가",
+   "type": "Guide",
+   "chars": 938,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=7203&PARENT_ID=145",
+   "categories": [
+    "안내",
+    "A-1",
+    "A-2",
+    "A-3",
+    "D-1",
+    "D-2",
+    "D-4",
+    "D-8",
+    "F-3",
+    "F-4",
+    "F-5",
+    "F-6",
+    "H-2"
+   ]
+  },
+  {
+   "title": "각종신고의무",
+   "type": "Guide",
+   "chars": 790,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=196&PARENT_ID=146",
+   "categories": [
+    "안내",
+    "D-1",
+    "D-2",
+    "D-4",
+    "D-5",
+    "D-6",
+    "D-7",
+    "D-8",
+    "D-9",
+    "E-1",
+    "E-10",
+    "F-2",
+    "F-4",
+    "F-6",
+    "H-2"
+   ]
+  },
+  {
+   "title": "귀화(일반,간이,특별)",
+   "type": "Guide",
+   "chars": 3866,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=200&PARENT_ID=148",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적회복",
+   "type": "Guide",
+   "chars": 1963,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=206&PARENT_ID=149",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적취득",
+   "type": "Guide",
+   "chars": 421,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=212&PARENT_ID=151",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적 선택의무/선택절차/이탈절차/보유상실",
+   "type": "Guide",
+   "chars": 849,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2177&PARENT_ID=152",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "종합평가 및 면접심사",
+   "type": "Guide",
+   "chars": 565,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2169&PARENT_ID=1257",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적선택명령/국적상실결정/외국국적포기의무",
+   "type": "Guide",
+   "chars": 572,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2198&PARENT_ID=1305",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "국적판정",
+   "type": "Guide",
+   "chars": 437,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=209&PARENT_ID=150",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "법과 질서",
+   "type": "Guide",
+   "chars": 724,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=7164&PARENT_ID=1541",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "재외동포 활동범위",
+   "type": "Guide",
+   "chars": 973,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=284&PARENT_ID=155",
+   "categories": [
+    "안내",
+    "F-4"
+   ]
+  },
+  {
+   "title": "거소신고의의/절차",
+   "type": "Guide",
+   "chars": 1979,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=282&PARENT_ID=155",
+   "categories": [
+    "안내",
+    "F-4"
+   ]
+  },
+  {
+   "title": "개요",
+   "type": "Guide",
+   "chars": 788,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=286&PARENT_ID=162",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "난민신청 및 심사절차",
+   "type": "Guide",
+   "chars": 1120,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=5088&PARENT_ID=1328",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "처우",
+   "type": "Guide",
+   "chars": 3158,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=5075&PARENT_ID=1330",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "출입국사범 심사결정",
+   "type": "Guide",
+   "chars": 1163,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=225&PARENT_ID=164",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "출입국사범 보호",
+   "type": "Guide",
+   "chars": 1019,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=226&PARENT_ID=165",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "증명발급",
+   "type": "Guide",
+   "chars": 1498,
+   "source": "https://www.hikorea.go.kr/info/InfoDatail.pt?CAT_SEQ=2181&PARENT_ID=1296",
+   "categories": [
+    "안내"
+   ]
+  },
+  {
+   "title": "출입국관리법 제7조 외국인의 입국",
+   "type": "Law",
+   "chars": 580,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제10조 영주자격",
+   "type": "Law",
+   "chars": 540,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제12조 입국심사",
+   "type": "Law",
+   "chars": 575,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제19조 외국인을 고용한 자 등의 신고의무",
+   "type": "Law",
+   "chars": 544,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제30조 재입국허가",
+   "type": "Law",
+   "chars": 489,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제31조 외국인등록",
+   "type": "Law",
+   "chars": 719,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제33조 외국인등록증의 발급 등",
+   "type": "Law",
+   "chars": 668,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제33조 영주증 재발급에 관한 특례 등",
+   "type": "Law",
+   "chars": 579,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제33조 외국인등록증 등의 채무이행 확보수단 제공 등의 금지",
+   "type": "Law",
+   "chars": 490,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제36조 체류지 변경의 신고",
+   "type": "Law",
+   "chars": 1012,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제37조 외국인등록증의 반납 등",
+   "type": "Law",
+   "chars": 761,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제89조 각종 허가 등의 취소ㆍ변경",
+   "type": "Law",
+   "chars": 613,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제89조 영주자격의 취소 특례",
+   "type": "Law",
+   "chars": 626,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 제91조 사증발급 및 체류허가 신청문서의 전자화",
+   "type": "Law",
+   "chars": 961,
+   "source": "https://www.law.go.kr/법령/출입국관리법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제7조 사증발급",
+   "type": "Law",
+   "chars": 603,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제7조 온라인에 의한 사증발급 신청 등",
+   "type": "Law",
+   "chars": 529,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제8조 국제친선 등을 위한 입국허가",
+   "type": "Law",
+   "chars": 400,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제10조 외국인입국허가서의 발급 등",
+   "type": "Law",
+   "chars": 672,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "A-1",
+    "A-3"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제12조 영주자격 요건 등",
+   "type": "Law",
+   "chars": 726,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제15조 입국심사",
+   "type": "Law",
+   "chars": 1745,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "A-1",
+    "A-2",
+    "B-1"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제18조 관광상륙허가의 기준",
+   "type": "Law",
+   "chars": 1084,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제23조 외국인의 취업과 체류자격",
+   "type": "Law",
+   "chars": 1741,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "C-4",
+    "E-1",
+    "E-10",
+    "F-2",
+    "F-4",
+    "F-5",
+    "F-6",
+    "H-1",
+    "H-2"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제24조 외국인을 고용한 자 등의 신고",
+   "type": "Law",
+   "chars": 884,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제25조 체류자격 외 활동허가",
+   "type": "Law",
+   "chars": 548,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 허가",
+   "type": "Law",
+   "chars": 563,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고",
+   "type": "Law",
+   "chars": 582,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "E-1",
+    "E-7"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제34조 체류자격 외 활동허가 신청 등에 관한 온라인 방문 예약",
+   "type": "Law",
+   "chars": 471,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제40조 외국인등록번호의 체계 등",
+   "type": "Law",
+   "chars": 558,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제42조 외국인등록증의 재발급",
+   "type": "Law",
+   "chars": 554,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제45조 체류지 변경의 신고",
+   "type": "Law",
+   "chars": 495,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제46조 외국인등록증의 반납 등",
+   "type": "Law",
+   "chars": 968,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제47조 외국인등록사항의 말소 절차 등",
+   "type": "Law",
+   "chars": 872,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "A-1",
+    "A-2",
+    "A-3"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 제76조 체류허가의 특례",
+   "type": "Law",
+   "chars": 421,
+   "source": "https://www.law.go.kr/법령/출입국관리법 시행령",
+   "categories": [
+    "법령",
+    "조문",
+    "F-5"
+   ]
+  },
+  {
+   "title": "국적법 제4조 귀화에 의한 국적 취득",
+   "type": "Law",
+   "chars": 522,
+   "source": "https://www.law.go.kr/법령/국적법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 제6조 간이귀화 요건",
+   "type": "Law",
+   "chars": 719,
+   "source": "https://www.law.go.kr/법령/국적법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 제10조 국적 취득자의 외국 국적 포기 의무",
+   "type": "Law",
+   "chars": 638,
+   "source": "https://www.law.go.kr/법령/국적법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 제22조 국적심의위원회",
+   "type": "Law",
+   "chars": 443,
+   "source": "https://www.law.go.kr/법령/국적법",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제8조 외국인근로자 고용허가",
+   "type": "Law",
+   "chars": 595,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제12조 외국인근로자 고용의 특례",
+   "type": "Law",
+   "chars": 1075,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제18조 취업활동 기간 제한에 관한 특례",
+   "type": "Law",
+   "chars": 494,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제18조 재입국 취업 제한의 특례",
+   "type": "Law",
+   "chars": 1080,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제20조 외국인근로자 고용의 제한",
+   "type": "Law",
+   "chars": 402,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "외국인근로자의 고용 등에 관한 법률 제25조 사업 또는 사업장 변경의 허용",
+   "type": "Law",
+   "chars": 934,
+   "source": "https://www.law.go.kr/법령/외국인근로자의 고용 등에 관한 법률",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 별표 단기체류자격(제12조 관련)",
+   "type": "Law",
+   "chars": 772,
+   "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296941",
+   "categories": [
+    "법령",
+    "단기체류자격",
+    "B-1",
+    "B-2",
+    "C-1",
+    "C-3",
+    "C-4",
+    "E-1",
+    "E-7"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 별표 장기체류자격(제12조 관련)",
+   "type": "Law",
+   "chars": 10135,
+   "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296949",
+   "categories": [
+    "법령",
+    "장기체류자격",
+    "A-1",
+    "A-2",
+    "A-3",
+    "D-1",
+    "D-10",
+    "D-2",
+    "D-3",
+    "D-4",
+    "D-5",
+    "D-6",
+    "D-7",
+    "D-8",
+    "D-9",
+    "E-1",
+    "E-10",
+    "E-2",
+    "E-3",
+    "E-4",
+    "E-5",
+    "E-6",
+    "E-7",
+    "E-8",
+    "E-9",
+    "F-1",
+    "F-2",
+    "F-3",
+    "F-4",
+    "F-5",
+    "F-6",
+    "G-1",
+    "H-1",
+    "H-2"
+   ]
+  },
+  {
+   "title": "출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)",
+   "type": "Law",
+   "chars": 2204,
+   "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296977",
+   "categories": [
+    "법령",
+    "영주자격",
+    "D-7",
+    "D-8",
+    "E-7",
+    "F-2",
+    "F-4",
+    "F-5",
+    "H-2"
+   ]
+  }
+ ],
+ "skipped": [
+  [
+   "출입국우대카드",
+   "본문 225자 < 400"
+  ],
+  [
+   "국적법 질의응답",
+   "본문 92자 < 400"
+  ],
+  [
+   "국적증서수여식",
+   "도메인 지식 아님 — 안내/연락처 페이지"
+  ],
+  [
+   "지원부서 안내",
+   "도메인 지식 아님 — 안내/연락처 페이지"
+  ],
+  [
+   "동포관련 사이트",
+   "도메인 지식 아님 — 안내/연락처 페이지"
+  ],
+  [
+   "체류/취업",
+   "본문 322자 < 400"
+  ],
+  [
+   "출입국사범 의미/조사",
+   "본문 242자 < 400"
+  ],
+  [
+   "개요",
+   "본문 389자 < 400"
+  ],
+  [
+   "배정 현황 및 참여 광역 지방정부 연락처",
+   "도메인 지식 아님 — 안내/연락처 페이지"
+  ],
+  [
+   "개인정보 수집·이용안내",
+   "도메인 지식 아님 — 안내/연락처 페이지"
+  ]
+ ],
+ "min_chars": 400
+}

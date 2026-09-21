@@ -1,0 +1,9 @@
+# 색은 눈으로 고르지 않고 대비비로 골랐다.
+# streamlit 기본 primaryColor(#ff4b4b)는 흰 글자와 3.3:1 로 WCAG AA(4.5:1) 미달이다.
+# impeccable detect 가 실제로 이걸 잡아냈다.
+[theme]
+primaryColor = "#1f4e79"          # 흰 글자 대비 8.66:1. 공공 안내 도메인에 빨강보다 맞다
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f6f9"
+textColor = "#1c2431"
+font = "sans serif"

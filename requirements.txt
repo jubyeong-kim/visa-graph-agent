@@ -1,0 +1,10 @@
+requests
+olefile          # 법령 별표 HWP 본문 추출 (순수 파이썬)
+networkx         # 지식 그래프. 노드 수백 개 규모라 그래프 DB 불필요
+langchain-openai
+langchain-experimental   # LLMGraphTransformer
+langgraph
+rank_bm25        # basic RAG 베이스라인
+rapidfuzz        # 표기 정규화
+tiktoken
+streamlit

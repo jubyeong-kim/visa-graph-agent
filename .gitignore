@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+data/_hikorea_pages.json
+output/runs.jsonl
+
+# output/cache/ 는 일부러 올린다. LLM 추출은 temperature=0 이어도 실행마다
+# 결과가 달라진다. 캐시가 없으면 채점자가 다시 돌렸을 때 다른 그래프가 나온다.
+# 캐시가 이 프로젝트의 재현성 장치다. --force 를 주면 다시 뽑는다.
+
+# 개발 편의용 런처. 과제물이 아니다.
+.claude/
