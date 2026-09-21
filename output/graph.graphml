@@ -18,6 +18,10 @@
   <data key="d0">Visa</data>
   <data key="d1">영주</data>
 </node>
+<node id="일반귀화">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
 <node id="거소신고의의">
   <data key="d0"></data>
   <data key="d1"></data>
@@ -194,7 +198,7 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="귀화허가">
+<node id="국적선택명령">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -202,7 +206,55 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
+<node id="관보">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="국적상실자정보고시">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="가족관계등록관서">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="주민등록관서">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="국적상실">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="외교부장관">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="귀화허가">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="종합평가">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="면접심사">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
 <node id="국민선서">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="귀화증서 수여">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="청장등">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -319,10 +371,6 @@
   <data key="d1"></data>
 </node>
 <node id="가족관계통보서">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="일반귀화">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -979,6 +1027,62 @@
   <data key="d5">출입국관리법 제33조 영주증 재발급에 관한 특례 등</data>
   <data key="d6">1</data>
 </edge>
+<edge source="일반귀화" target="F-5" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="5년 이상 계속하여 대한민국에 주소가 있을 것" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="대한민국에서 영주할 수 있는 체류자격" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="대한민국의 민법 상 성년" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="법령을 준수하는 등 법무부령으로 정하는 품행 단정의 요건" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="자신의 자산이나 기능에 의하거나 생계를 같이 하는 가족에 의존하여 생계를 유지할 능력" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="국어능력 및 대한민국의 풍습에 대한 이해 등 대한민국 국민으로서의 기본 소양" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="일반귀화" target="국가안전보장·질서유지 또는 공공복리를 해치지 아니한다고 법무부장관이 인정" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">귀화(일반,간이,특별)</data>
+  <data key="d5">귀화(일반,간이,특별)</data>
+  <data key="d6">1</data>
+</edge>
 <edge source="거소신고의의" target="출입국·외국인청" id="0">
   <data key="d2">HANDLED_BY</data>
   <data key="d3">rule</data>
@@ -1560,6 +1664,62 @@
   <data key="d5">국민출입국심사</data>
   <data key="d6">1</data>
 </edge>
+<edge source="국적선택명령" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적선택명령" target="관보" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적상실자정보고시" target="가족관계등록관서" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적상실자정보고시" target="주민등록관서" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적상실자정보고시" target="관보" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적상실" target="외교부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d5">국적법 시행령 제18조 국적선택명령의 절차 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="종합평가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="면접심사" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
 <edge source="귀화허가" target="법무부장관" id="0">
   <data key="d2">HANDLED_BY</data>
   <data key="d3">llm</data>
@@ -1567,11 +1727,46 @@
   <data key="d5">국적법 제4조 귀화에 의한 국적 취득</data>
   <data key="d6">1</data>
 </edge>
+<edge source="종합평가" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="면접심사" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
 <edge source="국민선서" target="법무부장관" id="0">
   <data key="d2">HANDLED_BY</data>
   <data key="d3">llm</data>
-  <data key="d4">국적법 제4조 귀화에 의한 국적 취득</data>
-  <data key="d5">국적법 제4조 귀화에 의한 국적 취득</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여; 국적법 제4조 귀화에 의한 국적 취득</data>
+  <data key="d6">2</data>
+</edge>
+<edge source="귀화증서 수여" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행" target="청장등" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행</data>
   <data key="d6">1</data>
 </edge>
 <edge source="국적관련 신청 및 심사 업무" target="국적업무 전담관서" id="0">
@@ -1754,55 +1949,6 @@
   <data key="d3">llm</data>
   <data key="d4">국적회복</data>
   <data key="d5">국적회복</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="5년 이상 계속하여 대한민국에 주소가 있을 것" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="대한민국에서 영주할 수 있는 체류자격" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="대한민국의 민법 상 성년" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="법령을 준수하는 등 법무부령으로 정하는 품행 단정의 요건" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="자신의 자산이나 기능에 의하거나 생계를 같이 하는 가족에 의존하여 생계를 유지할 능력" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="국어능력 및 대한민국의 풍습에 대한 이해 등 대한민국 국민으로서의 기본 소양" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="일반귀화" target="국가안전보장·질서유지 또는 공공복리를 해치지 아니한다고 법무부장관이 인정" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">귀화(일반,간이,특별)</data>
-  <data key="d5">귀화(일반,간이,특별)</data>
   <data key="d6">1</data>
 </edge>
 <edge source="C-4" target="근무처변경·추가허가" id="0">

@@ -58,7 +58,7 @@ E-7(특정활동) --[CONVERTS_TO]--> F-5(영주)
 | 하이코리아 `hikorea.go.kr` | 체류·국적·동포·난민 공식 안내 | 36 |
 | 국가법령정보 `law.go.kr` | 출입국관리법·시행령·국적법 조문과 별표 | 46 |
 
-**82건 · 84,916자.** 수집 전 `robots.txt` 를 확인하고 본문 경로 수집이 허용된 것만 썼다.
+**91건.** 수집 전 `robots.txt` 를 확인하고 본문 경로 수집이 허용된 것만 썼다.
 법령 본문은 저작권법 제7조상 보호 대상이 아니다. 공공누리 **제4유형(변경금지)** 인
 `체류자격별 안내 매뉴얼(.hwp)` 은 **쓰지 않았다** — 그래프로 가공하는 것이 변경에
 해당할 수 있다.
@@ -79,9 +79,9 @@ graph LR
   Document["Document<br/>서류"]
 
   Visa ==>|"CONVERTS_TO (16)"| Visa
-  Visa ==>|"REQUIRES (40)"| Requirement
-  Visa -->|"ALLOWS (46)"| Procedure
-  Procedure -->|"HANDLED_BY (95)"| Organization
+  Visa ==>|"REQUIRES (41)"| Requirement
+  Visa -->|"ALLOWS (48)"| Procedure
+  Procedure -->|"HANDLED_BY (106)"| Organization
   Procedure -->|"SUBMITS (71)"| Document
   Requirement ==>|"SATISFIED_BY (3)"| Program
   Program -->|"OPERATED_BY (1)"| Organization

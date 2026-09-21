@@ -423,10 +423,16 @@ def key_paths(seeds, answer, evidence):
         return n in answer or (len(lb) >= 2 and lb in answer)
 
     used = {n for h, r, t, _s, _h2 in evidence for n in (h, t) if mentioned(n)}
+    # 질문은 방향을 안 따지므로 양방향으로 걷되, **원래 방향을 기억해 둔다.**
+    # 안 그러면 `일반귀화 -[REQUIRES]-> F-5` 가 화면에 `F-5 -[REQUIRES]-> 일반귀화` 로
+    # 뒤집혀 나온다. "영주자격이 귀화를 요구한다"로 읽히니 법률 도메인에서는 오해다.
     sub = nx.DiGraph()
+    orient = {}
     for h, r, t, _s, _hop in evidence:
         sub.add_edge(h, t, relation=r)
-        sub.add_edge(t, h, relation=r)          # 질문은 방향을 안 따진다
+        sub.add_edge(t, h, relation=r)
+        orient[(h, t, r)] = (h, r, t)
+        orient.setdefault((t, h, r), (h, r, t))   # 거꾸로 걸어도 원래 방향으로 되돌린다
     paths, seen = [], set()
     for s in seeds:
         for goal in used:
@@ -437,7 +443,8 @@ def key_paths(seeds, answer, evidence):
             except nx.NetworkXNoPath:
                 continue
             for i in range(len(p) - 1):
-                e = (p[i], sub.edges[p[i], p[i + 1]]["relation"], p[i + 1])
+                r = sub.edges[p[i], p[i + 1]]["relation"]
+                e = orient.get((p[i], p[i + 1], r), (p[i], r, p[i + 1]))
                 if e not in seen:
                     seen.add(e)
                     paths.append([label(e[0]), e[1], label(e[2])])

@@ -21,6 +21,9 @@ LAW_XML = ("https://www.law.go.kr/DRF/lawService.do?OC=test&target=law&type=XML"
 MIN_CHARS = 400
 
 VISA = re.compile(r"\(([A-H]-\d{1,2}(?:-\d)?)\)")
+# 서식은 하이픈 없이 "영주자격(F5)" 로 쓴다. 코드가 갈리면 노드가 둘로 쪼개진다.
+VISA_NOHYPHEN = re.compile(r"\(([A-H])\s?(\d{1,2})\)")
+skipped_byl = []
 LAWNM = re.compile(r"「([^」]{4,40})」")          # 「...」 로 인용된 법률명
 
 # 도메인 지식이 아닌 안내 페이지는 버린다. 그래프에 넣어봐야 개체가 안 엮힌다.
@@ -28,7 +31,11 @@ DROP = {"국적증서수여식", "동포관련 사이트", "지원부서 안내"
         "개인정보 수집·이용안내", "배정 현황 및 참여 광역 지방정부 연락처"}
 
 # 조문을 문서로 쓸 법률과, 제목에서 찾을 도메인 키워드
-LAWS = ["출입국관리법", "출입국관리법 시행령", "국적법",
+# 시행규칙까지 넣는 이유: 가장 중요한 표가 시행규칙 **별지서식**에 있다.
+# 「귀화허가 신청서」에 "일반귀화 … 영주자격(F5)을 가지고 있는 사람" 이라고 적혀 있고,
+# 그 한 줄이 귀화를 비자 그래프에 잇는 유일한 근거다. 법·시행령에는 없다
+# (국적법 전문에 "영주자격"·"F-5" 가 0회 나온다).
+LAWS = ["출입국관리법", "출입국관리법 시행령", "국적법", "국적법 시행령", "국적법 시행규칙",
         "재한외국인 처우 기본법", "외국인근로자의 고용 등에 관한 법률"]
 CORE = re.compile(r"체류자격|영주자격|사증|외국인등록|귀화|체류기간|근무처|고용허가")
 ART_KEY = re.compile(r"체류|사증|입국|외국인등록|자격|영주|귀화|국적|고용|허가|신고|근무처|활동|연장|변경|부여|초청|등록증")
@@ -86,28 +93,45 @@ def hwp_text(data):
 
 
 def fetch_law_byl(S):
-    """시행령 별표 중 체류자격 관련 세 건을 HWP 로 받아 텍스트로 만든다."""
-    x = S.get(LAW_XML, timeout=60).text
-    want = {"000100E": "단기체류자격", "000102E": "장기체류자격", "000103E": "영주자격"}
+    """법령의 별표·별지서식을 HWP 로 받아 텍스트로 만든다.
+
+    **본문(조문)만 받으면 반쪽이다.** 이 도메인에서 가장 중요한 표가 전부 별표에 있다 —
+    체류자격 36종, 영주자격 요건, 그리고 귀화 요건이 그렇다.
+
+    그리고 반드시 HWP 여야 한다. 같은 별표의 PDF 에는 공백 문자가 아예 없어
+    "외국의신문사, 방송사" 로 나온다.
+
+    처음에는 출입국관리법 시행령 별표 세 건만 하드코딩했다. 그랬더니 귀화가 비자
+    그래프와 끊겼다 — 「귀화허가 신청서」(국적법 시행규칙 별지서식)에
+    "일반귀화 … 「민법」상 성년이며 영주자격(F5)을 가지고 있는 사람" 이라고
+    적혀 있는데 그 문서를 안 받아 왔기 때문이다. 제목으로 걸러 전부 받는다.
+    """
+    keep = re.compile(r"체류자격|영주|귀화|국적취득|사증")
     docs = []
-    for key, short in want.items():
-        m = re.search(r'<별표단위 별표키="%s">(.*?)</별표단위>' % key, x, re.S)
-        if not m:
-            continue
-        blk = m.group(1)
-        title = re.search(r"<별표제목><!\[CDATA\[(.*?)\]\]>", blk).group(1)
-        link = re.search(r"<별표서식파일링크>(.*?)</별표서식파일링크>", blk).group(1)
-        url = "https://www.law.go.kr" + link
-        body = hwp_text(S.get(url, timeout=60).content)
-        docs.append((f"출입국관리법 시행령 별표 {title}", short, body, url))
-        time.sleep(0.5)
+    for nm in LAWS:
+        x = S.get("https://www.law.go.kr/DRF/lawService.do",
+                  params={"OC": "test", "target": "law", "type": "XML", "LM": nm},
+                  timeout=60).text
+        for blk in re.findall(r"<별표단위.*?</별표단위>", x, re.S):
+            ti = re.search(r"<별표제목><!\[CDATA\[(.*?)\]\]>", blk)
+            lk = re.search(r"<별표서식파일링크>(.*?)</별표서식파일링크>", blk)
+            if not ti or not lk or not keep.search(ti.group(1)):
+                continue
+            url = "https://www.law.go.kr" + lk.group(1)
+            try:
+                body = hwp_text(S.get(url, timeout=60).content)
+            except Exception as e:
+                skipped_byl.append((nm + " " + ti.group(1), "HWP 열기 실패: %s" % type(e).__name__))
+                continue
+            docs.append(("%s 별표 %s" % (nm, ti.group(1)), "법령표", body, url))
+            time.sleep(0.4)
     return docs
 
 
 def fetch_law_articles(S):
     """법령 조문을 문서 단위로 받는다.
 
-    별표와 달리 조문은 XML 안에 텍스트가 그대로 있고 띄어쓰기도 멀정하다.
+    별표와 달리 조문은 XML 안에 텍스트가 그대로 있고 띄어쓰기도 멀쩡하다.
     제목이 도메인 키워드에 걸리는 조문만 골라 무관한 조문(벌칙·서식 등)을 제외한다.
     """
     for nm in LAWS:
@@ -118,14 +142,17 @@ def fetch_law_articles(S):
             ti = re.search(r"<조문제목><!\[CDATA\[(.*?)\]\]>", a)
             if not ti or not ART_KEY.search(ti.group(1)):
                 continue
-            body = " ".join(re.findall(r"<(?:조문내용|항내용|호내용|목내용)><!\[CDATA\[(.*?)\]\]>", a, re.S))
+            body = " ".join(re.findall(
+                r"<(?:조문내용|항내용|호내용|목내용)><!\[CDATA\[(.*?)\]\]>", a, re.S))
             body = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body)).strip()
             no = re.search(r"<조문번호>(\d+)</조문번호>", a)
-            yield f"{nm} 제{no.group(1) if no else '?'}조 {ti.group(1)}", body,                   f"https://www.law.go.kr/법령/{nm}"
+            yield ("%s 제%s조 %s" % (nm, no.group(1) if no else "?", ti.group(1)),
+                   body, "https://www.law.go.kr/법령/" + nm)
         time.sleep(0.5)
 
 
 def save(title, cats, body, url, manifest, dtype):
+    body = VISA_NOHYPHEN.sub(lambda m: "(%s-%s)" % (m.group(1), m.group(2)), body)
     name = re.sub(r'[\/:*?"<>|]', "_", title).replace(" ", "_")
     path = os.path.join(OUT, name + ".md")
     with open(path, "w", encoding="utf-8") as f:

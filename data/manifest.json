@@ -836,6 +836,76 @@
    ]
   },
   {
+   "title": "국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등",
+   "type": "Law",
+   "chars": 549,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여",
+   "type": "Law",
+   "chars": 509,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서 및 귀화증서 수여 등의 대행",
+   "type": "Law",
+   "chars": 428,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행령 제6조 특별귀화 대상자",
+   "type": "Law",
+   "chars": 700,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행령 제18조 국적선택명령의 절차 등",
+   "type": "Law",
+   "chars": 1030,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행령 제27조 허가 등의 취소의 기준ㆍ절차 등",
+   "type": "Law",
+   "chars": 887,
+   "source": "https://www.law.go.kr/법령/국적법 시행령",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
+   "title": "국적법 시행규칙 제3조 귀화허가 신청서의 서식 및 첨부서류",
+   "type": "Law",
+   "chars": 2084,
+   "source": "https://www.law.go.kr/법령/국적법 시행규칙",
+   "categories": [
+    "법령",
+    "조문"
+   ]
+  },
+  {
    "title": "외국인근로자의 고용 등에 관한 법률 제8조 외국인근로자 고용허가",
    "type": "Law",
    "chars": 595,
@@ -902,7 +972,7 @@
    "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296941",
    "categories": [
     "법령",
-    "단기체류자격",
+    "법령표",
     "B-1",
     "B-2",
     "C-1",
@@ -919,7 +989,7 @@
    "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296949",
    "categories": [
     "법령",
-    "장기체류자격",
+    "법령표",
     "A-1",
     "A-2",
     "A-3",
@@ -961,7 +1031,7 @@
    "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=169296977",
    "categories": [
     "법령",
-    "영주자격",
+    "법령표",
     "D-7",
     "D-8",
     "E-7",
@@ -969,6 +1039,26 @@
     "F-4",
     "F-5",
     "H-2"
+   ]
+  },
+  {
+   "title": "국적법 시행규칙 별표 국적취득 신고서",
+   "type": "Law",
+   "chars": 1006,
+   "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=139986257",
+   "categories": [
+    "법령",
+    "법령표"
+   ]
+  },
+  {
+   "title": "국적법 시행규칙 별표 귀화허가 신청서",
+   "type": "Law",
+   "chars": 11967,
+   "source": "https://www.law.go.kr/LSW/flDownload.do?flSeq=139986265",
+   "categories": [
+    "법령",
+    "법령표"
    ]
   }
  ],
@@ -1012,6 +1102,14 @@
   [
    "개인정보 수집·이용안내",
    "도메인 지식 아님 — 안내/연락처 페이지"
+  ],
+  [
+   "국적법 시행규칙 별표 귀화 추천서",
+   "본문 305자"
+  ],
+  [
+   "국적법 시행규칙 별표 국적취득 사실증명서",
+   "본문 382자"
   ]
  ],
  "min_chars": 400
