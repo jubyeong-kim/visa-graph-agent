@@ -5,11 +5,11 @@
 ```bash
 git clone https://github.com/jubyeong-kim/visa-graph-agent && cd visa-graph-agent
 pip install -r requirements.txt
-cp .env.example .env          # OPENAI_API_KEY 를 채운다
+cp .env.example .env          # ANTHROPIC_API_KEY 를 채운다
 streamlit run app.py          # 그래프는 이미 들어 있어 바로 뜬다
 ```
 
-> 공개 배포는 아직 하지 않았다. 질문 한 번마다 OpenAI 호출이 일어나 **열어 두면
+> 공개 배포는 아직 하지 않았다. 질문 한 번마다 모델 호출이 일어나 **열어 두면
 > 모르는 사람의 질문에 저장소 주인이 비용을 낸다.** 로컬 실행을 기본으로 둔다.
 
 한국에 사는 외국인의 비자·정착 질문에 답한다.
