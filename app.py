@@ -111,7 +111,22 @@ if go and q.strip():
                ", ".join(r["seeds"]) if r["seeds"] else "없음"))
 
     st.subheader("답변")
-    st.write(r["answer"])
+    rp = r.get("reply")
+    if rp:
+        # 줄글 한 덩어리는 읽히지 않는다. 결론 먼저, 할 일은 목록으로, 설명은 그 뒤로.
+        st.markdown("<p style='font-size:1.18rem;font-weight:650;line-height:1.55;margin:0 0 .6rem'>"
+                    + rp["verdict"] + "</p>", unsafe_allow_html=True)
+        if rp.get("steps"):
+            st.markdown("**해야 할 일**")
+            for i, step in enumerate(rp["steps"], 1):
+                st.markdown("%d. %s" % (i, step))
+        if rp.get("details"):
+            st.markdown("**자세히**")
+            st.write(rp["details"])
+        if rp.get("unknown"):
+            st.info("확인되지 않는 것 — " + rp["unknown"])
+    else:
+        st.write(r["answer"])
     for f in r["flags"]:
         st.warning("검증 단계가 고친 것 — %s" % f)
 

@@ -12,8 +12,8 @@ graph LR
   Document["Document<br/>서류"]
 
   Visa ==>|"CONVERTS_TO (16)"| Visa
-  Visa ==>|"REQUIRES (78)"| Requirement
-  Visa -->|"ALLOWS (48)"| Procedure
+  Visa ==>|"REQUIRES (81)"| Requirement
+  Visa -->|"ALLOWS (109)"| Procedure
   Visa -->|"EXEMPT_FROM (8)"| Procedure
   Procedure -->|"HANDLED_BY (106)"| Organization
   Procedure -->|"SUBMITS (71)"| Document

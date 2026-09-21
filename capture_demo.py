@@ -35,7 +35,13 @@ with sync_playwright() as p:
     # 답이 나왔을 때만 생기는 것을 기다려야 한다 — 스피너가 사라지고 「출처 문서」가 뜰 때.
     pg.wait_for_selector("[data-testid='stSpinner']", state="detached", timeout=180000)
     pg.get_by_text("출처 문서", exact=True).wait_for(timeout=180000)
-    pg.wait_for_timeout(2000)                 # 마지막 페인트
+    # 「걸어간 경로」는 st.code 라 문법 하이라이터가 **나중에** 붙는다. 여기서
+    # 2초만 세고 찍었더니 경로 칸이 빈 회색 상자로 찍혔다 — 화면은 멀쩡했는데
+    # 그림만 비어 있었다. 글자가 실제로 들어올 때까지 기다린다.
+    pg.wait_for_function(
+        "(document.querySelector('[data-testid=\\'stCode\\'] code')||{}).textContent"
+        "?.includes('--[') === true", timeout=60000)
+    pg.wait_for_timeout(1500)                 # 마지막 페인트
     # 찍은 뒤에 화면 크기를 바꾸면 **Streamlit 이 다시 실행되어 답이 날아간다**.
     # (실제로 그랬다 — 리사이즈 후 답변이 사라진 채로 찍혔다.)
     # 크기는 처음에 정하고 끝까지 건드리지 않는다.

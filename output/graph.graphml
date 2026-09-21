@@ -22,35 +22,159 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="외국인등록">
+<node id="D-1">
+  <data key="d0">Visa</data>
+  <data key="d1">문화예술</data>
+</node>
+<node id="각종신고의무">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="15일 이내">
-  <data key="d0"></data>
-  <data key="d1"></data>
+<node id="D-2">
+  <data key="d0">Visa</data>
+  <data key="d1">유학</data>
+</node>
+<node id="D-4">
+  <data key="d0">Visa</data>
+  <data key="d1">일반연수</data>
+</node>
+<node id="D-5">
+  <data key="d0">Visa</data>
+  <data key="d1">취재</data>
+</node>
+<node id="D-6">
+  <data key="d0">Visa</data>
+  <data key="d1">종교</data>
+</node>
+<node id="D-7">
+  <data key="d0">Visa</data>
+  <data key="d1">주재</data>
+</node>
+<node id="D-8">
+  <data key="d0">Visa</data>
+  <data key="d1">기업투자</data>
+</node>
+<node id="D-9">
+  <data key="d0">Visa</data>
+  <data key="d1">무역경영</data>
+</node>
+<node id="E-1">
+  <data key="d0">Visa</data>
+  <data key="d1">교수</data>
+</node>
+<node id="E-10">
+  <data key="d0">Visa</data>
+  <data key="d1">선원취업</data>
+</node>
+<node id="F-2">
+  <data key="d0">Visa</data>
+  <data key="d1">거주</data>
+</node>
+<node id="F-4">
+  <data key="d0">Visa</data>
+  <data key="d1">재외동포</data>
+</node>
+<node id="F-6">
+  <data key="d0">Visa</data>
+  <data key="d1">결혼이민</data>
+</node>
+<node id="H-2">
+  <data key="d0">Visa</data>
+  <data key="d1">방문취업</data>
 </node>
 <node id="거소신고의의/절차">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="91일 이상">
+<node id="국제 결혼안내프로그램">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="90일 이내">
+<node id="근무처변경/추가">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="국내거소이전신고">
+<node id="D-3">
+  <data key="d0">Visa</data>
+  <data key="d1">기술연수</data>
+</node>
+<node id="E-6">
+  <data key="d0">Visa</data>
+  <data key="d1">예술흥행</data>
+</node>
+<node id="E-6-2">
+  <data key="d0">Visa</data>
+  <data key="d1"></data>
+</node>
+<node id="A-1">
+  <data key="d0">Visa</data>
+  <data key="d1">외교</data>
+</node>
+<node id="사증(VISA)">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="14일 이내">
+<node id="A-3">
+  <data key="d0">Visa</data>
+  <data key="d1">협정</data>
+</node>
+<node id="B-1">
+  <data key="d0">Visa</data>
+  <data key="d1">사증면제</data>
+</node>
+<node id="B-2">
+  <data key="d0">Visa</data>
+  <data key="d1">관광 통과</data>
+</node>
+<node id="C-3">
+  <data key="d0">Visa</data>
+  <data key="d1">단기방문</data>
+</node>
+<node id="승무원/상륙허가">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="주민등록">
+<node id="외국인등록">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="F-1">
+  <data key="d0">Visa</data>
+  <data key="d1">방문동거</data>
+</node>
+<node id="F-3">
+  <data key="d0">Visa</data>
+  <data key="d1">동반</data>
+</node>
+<node id="G-1">
+  <data key="d0">Visa</data>
+  <data key="d1">기타</data>
+</node>
+<node id="재외동포 활동범위">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="재입국허가">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="A-2">
+  <data key="d0">Visa</data>
+  <data key="d1">공무</data>
+</node>
+<node id="체류기간연장">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="체류자격변경">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="체류자격부여">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="체류자격외활동">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -74,19 +198,95 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="국적이탈신고">
+<node id="국적회복">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="국적취득">
+<node id="10년 이상">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="6개월 이내">
+<node id="91일 이상">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="귀화(일반,간이,특별)">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
 <node id="5년 이상">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="1개월 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="난민신청 및 심사절차">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="7일 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="90일을 초과">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="90일 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="1년 이상">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="2년까지">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="전 4개월부터">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="체류일반">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="60일이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="60일 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="외국인등록사항변경신고">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="15일 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="거소신고">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="국내거소이전신고">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="14일 이내">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="주민등록">
+  <data key="d0"></data>
+  <data key="d1"></data>
+</node>
+<node id="국적이탈신고">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -106,10 +306,6 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="1년 이상">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
 <node id="귀화허가">
   <data key="d0"></data>
   <data key="d1"></data>
@@ -118,35 +314,7 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="국적회복">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="10년 이상">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="국제 결혼안내프로그램">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="귀화(일반,간이,특별)">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="1개월 이내">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
 <node id="난민인정신청">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="7일 이내">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="난민신청 및 심사절차">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -162,27 +330,11 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="재입국허가">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="2년까지">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
 <node id="귀화신청">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="체류기간연장">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="전 4개월부터">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="체류일반">
+<node id="국내거소신고">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -190,15 +342,11 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="체류자격부여">
+<node id="발급신청">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="60일이내">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="60일 이내">
+<node id="전입신고">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -209,38 +357,6 @@
 <node id="7일이내">
   <data key="d0"></data>
   <data key="d1"></data>
-</node>
-<node id="A-1">
-  <data key="d0">Visa</data>
-  <data key="d1">외교</data>
-</node>
-<node id="A-2">
-  <data key="d0">Visa</data>
-  <data key="d1">공무</data>
-</node>
-<node id="A-3">
-  <data key="d0">Visa</data>
-  <data key="d1">협정</data>
-</node>
-<node id="D-1">
-  <data key="d0">Visa</data>
-  <data key="d1">문화예술</data>
-</node>
-<node id="D-6">
-  <data key="d0">Visa</data>
-  <data key="d1">종교</data>
-</node>
-<node id="F-1">
-  <data key="d0">Visa</data>
-  <data key="d1">방문동거</data>
-</node>
-<node id="F-3">
-  <data key="d0">Visa</data>
-  <data key="d1">동반</data>
-</node>
-<node id="G-1">
-  <data key="d0">Visa</data>
-  <data key="d1">기타</data>
 </node>
 <node id="거소신고의의">
   <data key="d0"></data>
@@ -258,41 +374,13 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="체류자격변경">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="체류자격외활동">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="D-7">
-  <data key="d0">Visa</data>
-  <data key="d1">주재</data>
-</node>
 <node id="E-7">
   <data key="d0">Visa</data>
   <data key="d1">특정활동</data>
 </node>
-<node id="F-2">
-  <data key="d0">Visa</data>
-  <data key="d1">거주</data>
-</node>
-<node id="D-8">
-  <data key="d0">Visa</data>
-  <data key="d1">기업투자</data>
-</node>
-<node id="D-9">
-  <data key="d0">Visa</data>
-  <data key="d1">무역경영</data>
-</node>
 <node id="D-10">
   <data key="d0">Visa</data>
   <data key="d1">구직</data>
-</node>
-<node id="E-1">
-  <data key="d0">Visa</data>
-  <data key="d1">교수</data>
 </node>
 <node id="E-2">
   <data key="d0">Visa</data>
@@ -310,25 +398,13 @@
   <data key="d0">Visa</data>
   <data key="d1">전문직업</data>
 </node>
-<node id="E-6">
-  <data key="d0">Visa</data>
-  <data key="d1">예술흥행</data>
-</node>
 <node id="5년 이상 체류">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="F-4">
-  <data key="d0">Visa</data>
-  <data key="d1">재외동포</data>
-</node>
 <node id="2년 이상 체류">
   <data key="d0"></data>
   <data key="d1"></data>
-</node>
-<node id="H-2">
-  <data key="d0">Visa</data>
-  <data key="d1">방문취업</data>
 </node>
 <node id="3년 이상 체류">
   <data key="d0"></data>
@@ -359,30 +435,6 @@
   <data key="d1"></data>
 </node>
 <node id="외국인 직업, 연간 소득금액 신고서">
-  <data key="d0"></data>
-  <data key="d1"></data>
-</node>
-<node id="D-2">
-  <data key="d0">Visa</data>
-  <data key="d1">유학</data>
-</node>
-<node id="D-4">
-  <data key="d0">Visa</data>
-  <data key="d1">일반연수</data>
-</node>
-<node id="D-5">
-  <data key="d0">Visa</data>
-  <data key="d1">취재</data>
-</node>
-<node id="E-10">
-  <data key="d0">Visa</data>
-  <data key="d1">선원취업</data>
-</node>
-<node id="F-6">
-  <data key="d0">Visa</data>
-  <data key="d1">결혼이민</data>
-</node>
-<node id="국내거소신고">
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
@@ -605,10 +657,6 @@
 <node id="H-1">
   <data key="d0">Visa</data>
   <data key="d1">관광취업</data>
-</node>
-<node id="E-6-2">
-  <data key="d0">Visa</data>
-  <data key="d1"></data>
 </node>
 <node id="출입국항을 관할하는 지방 출입국·외국인관서">
   <data key="d0"></data>
@@ -874,14 +922,6 @@
   <data key="d0"></data>
   <data key="d1"></data>
 </node>
-<node id="C-3">
-  <data key="d0">Visa</data>
-  <data key="d1">단기방문</data>
-</node>
-<node id="D-3">
-  <data key="d0">Visa</data>
-  <data key="d1">기술연수</data>
-</node>
 <node id="S-3">
   <data key="d0"></data>
   <data key="d1"></data>
@@ -893,10 +933,6 @@
 <node id="입국신고서">
   <data key="d0"></data>
   <data key="d1"></data>
-</node>
-<node id="B-1">
-  <data key="d0">Visa</data>
-  <data key="d1">사증면제</data>
 </node>
 <node id="관광상륙허가">
   <data key="d0"></data>
@@ -1136,9 +1172,23 @@
   <data key="d5">처우; 출입국관리법 제10조 영주자격</data>
   <data key="d6">2</data>
 </edge>
+<edge source="F-5" target="승무원/상륙허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">승무원/상륙허가</data>
+  <data key="d5">승무원/상륙허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-5" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
 <edge source="F-5" target="체류자격부여" id="0">
   <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
+  <data key="d3">rule</data>
   <data key="d4">체류자격부여</data>
   <data key="d5">체류자격부여</data>
   <data key="d6">1</data>
@@ -1234,25 +1284,809 @@
   <data key="d5">귀화(일반,간이,특별)</data>
   <data key="d6">1</data>
 </edge>
-<edge source="외국인등록" target="15일 이내" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="D-1" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">rule</data>
   <data key="d4">각종신고의무</data>
   <data key="d5">각종신고의무</data>
   <data key="d6">1</data>
 </edge>
-<edge source="외국인등록" target="6개월 이내" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="D-1" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">rule</data>
-  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
-  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
   <data key="d6">1</data>
 </edge>
-<edge source="외국인등록" target="1년 이상" id="0">
+<edge source="D-1" target="외국인등록" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-1" target="외국인등록" id="1">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-1" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-1" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="체류자격외활동" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격외활동</data>
+  <data key="d5">체류자격외활동</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-2" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-4" target="D-2" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">llm</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-5" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-5" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-5" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="외국인등록" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="외국인등록" id="1">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="체류자격외활동" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격외활동</data>
+  <data key="d5">체류자격외활동</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-6" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-7" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-7" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-7" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-7" target="5년 이상 체류" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
-  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
-  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-7" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="5년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="3년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-8" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-9" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-9" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-9" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-9" target="5년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-9" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="체류자격외활동" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격외활동</data>
+  <data key="d5">체류자격외활동</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="5년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-1" target="근무처 변경·추가 신고" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고</data>
+  <data key="d5">출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-10" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-10" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-10" target="근무처변경·추가허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-10" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="5년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="3년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="5년 이상 계속 투자 상태를 유지" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="2년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-2" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="거소신고의의/절차" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="승무원/상륙허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">승무원/상륙허가</data>
+  <data key="d5">승무원/상륙허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="재외동포 활동범위" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재외동포 활동범위</data>
+  <data key="d5">재외동포 활동범위</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="2년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="국내거소신고" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="단순노무행위" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">재외동포 활동범위</data>
+  <data key="d5">재외동포 활동범위</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="선량한 풍속이나 그 밖의 사회질서에 반하는 행위" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">재외동포 활동범위</data>
+  <data key="d5">재외동포 활동범위</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-4" target="법무부장관이 공공의 이익이나 국내 취업질서 등의 유지를 위하여 제한할 필요가 있다고 인정하는 경우" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">llm</data>
+  <data key="d4">재외동포 활동범위</data>
+  <data key="d5">재외동포 활동범위</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="국제 결혼안내프로그램" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">국제 결혼안내프로그램</data>
+  <data key="d5">국제 결혼안내프로그램</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="체류기간연장" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류기간연장</data>
+  <data key="d5">체류기간연장</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-6" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="H-2" target="각종신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="H-2" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="H-2" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="H-2" target="외국인등록사항변경 신고의무" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="H-2" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="거소신고의의/절차" target="30일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국제 결혼안내프로그램" target="91일 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국제 결혼안내프로그램</data>
+  <data key="d5">국제 결혼안내프로그램</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-3" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="D-3" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-6" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-6" target="F-5" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-6" target="5년 이상 체류" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-6-2" target="근무처변경/추가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="E-6-2" target="근무처변경·추가허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">근무처변경/추가</data>
+  <data key="d5">근무처변경/추가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="사증(VISA)" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">사증(VISA)</data>
+  <data key="d5">사증(VISA)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="외국인등록" id="0">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-1" target="입국심사" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
+  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-3" target="사증(VISA)" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">사증(VISA)</data>
+  <data key="d5">사증(VISA)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-3" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-3" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-3" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-3" target="외국인등록" id="0">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="B-1" target="사증(VISA)" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">사증(VISA)</data>
+  <data key="d5">사증(VISA)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="B-1" target="입국심사" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
+  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="B-2" target="사증(VISA)" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">사증(VISA)</data>
+  <data key="d5">사증(VISA)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="C-3" target="사증(VISA)" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">사증(VISA)</data>
+  <data key="d5">사증(VISA)</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="C-3" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="C-3" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="C-3" target="D-8" id="0">
+  <data key="d2">CONVERTS_TO</data>
+  <data key="d3">llm</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="외국인등록" target="90일을 초과" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="외국인등록" target="90일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
   <data key="d6">1</data>
 </edge>
 <edge source="외국인등록" target="지방출입국·외국인관서의 장" id="0">
@@ -1269,68 +2103,187 @@
   <data key="d5">출입국관리법 제31조 외국인등록</data>
   <data key="d6">1</data>
 </edge>
-<edge source="거소신고의의/절차" target="91일 이상" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="F-1" target="외국인등록" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">rule</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
   <data key="d6">1</data>
 </edge>
-<edge source="거소신고의의/절차" target="90일 이내" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="F-1" target="외국인등록" id="1">
+  <data key="d2">EXEMPT_FROM</data>
   <data key="d3">rule</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
   <data key="d6">1</data>
 </edge>
-<edge source="거소신고의의/절차" target="30일 이내" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="F-1" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">rule</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
   <data key="d6">1</data>
 </edge>
-<edge source="국내거소이전신고" target="14일 이내" id="0">
-  <data key="d2">REQUIRES</data>
+<edge source="F-3" target="외국인등록" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">rule</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
   <data key="d6">1</data>
 </edge>
-<edge source="국내거소이전신고" target="출입국·외국인청" id="0">
+<edge source="F-3" target="외국인등록" id="1">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-3" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="F-3" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="G-1" target="외국인등록" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="G-1" target="외국인등록" id="1">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="G-1" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="재입국허가" target="1년 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="재입국허가" target="2년까지" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="재입국허가" target="법무부장관" id="0">
   <data key="d2">HANDLED_BY</data>
   <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">출입국관리법 제30조 재입국허가</data>
+  <data key="d5">출입국관리법 제30조 재입국허가</data>
   <data key="d6">1</data>
 </edge>
-<edge source="국내거소이전신고" target="F-4" id="0">
-  <data key="d2">SUBMITS</data>
+<edge source="A-2" target="재입국허가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">재입국허가</data>
+  <data key="d5">재입국허가</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-2" target="체류자격변경" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-2" target="체류자격부여" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-2" target="외국인등록" id="0">
+  <data key="d2">EXEMPT_FROM</data>
+  <data key="d3">rule</data>
+  <data key="d4">외국인등록</data>
+  <data key="d5">외국인등록</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="A-2" target="입국심사" id="0">
+  <data key="d2">ALLOWS</data>
   <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
+  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
+  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
   <data key="d6">1</data>
 </edge>
-<edge source="국내거소이전신고" target="여권" id="0">
-  <data key="d2">SUBMITS</data>
-  <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="국내거소이전신고" target="국내거소신고" id="0">
-  <data key="d2">SUBMITS</data>
-  <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="주민등록" target="30일 이내" id="0">
+<edge source="체류기간연장" target="전 4개월부터" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차; 출입국관리법 시행령 제46조 외국인등록증의 반납 등</data>
-  <data key="d6">2</data>
+  <data key="d4">체류기간연장</data>
+  <data key="d5">체류기간연장</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류기간연장" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류기간연장</data>
+  <data key="d5">체류기간연장</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격변경" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격변경</data>
+  <data key="d5">체류자격변경</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격부여" target="90일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격부여" target="60일이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격부여" target="60일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격부여" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격부여</data>
+  <data key="d5">체류자격부여</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류자격외활동" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류자격외활동</data>
+  <data key="d5">체류자격외활동</data>
+  <data key="d6">1</data>
 </edge>
 <edge source="국적 선택의무/선택절차/이탈절차/보유상실" target="3개월 이내" id="0">
   <data key="d2">REQUIRES</data>
@@ -1351,76 +2304,6 @@
   <data key="d3">rule</data>
   <data key="d4">국적 선택의무/선택절차/이탈절차/보유상실</data>
   <data key="d5">국적 선택의무/선택절차/이탈절차/보유상실</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="국적이탈신고" target="3개월 이내" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적 선택의무/선택절차/이탈절차/보유상실</data>
-  <data key="d5">국적 선택의무/선택절차/이탈절차/보유상실</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="국적이탈신고" target="국적업무 전담관서" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">llm</data>
-  <data key="d4">국적업무일반</data>
-  <data key="d5">국적업무일반</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="국적취득" target="6개월 이내" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적법 시행규칙 별표 국적취득 신고서</data>
-  <data key="d5">국적법 시행규칙 별표 국적취득 신고서</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="간이귀화" target="3년 이상" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
-  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서; 국적법 제6조 간이귀화 요건</data>
-  <data key="d6">2</data>
-</edge>
-<edge source="혼인귀화" target="2년 이상" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
-  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="귀화허가" target="1년 이내" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
-  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등; 종합평가 및 면접심사</data>
-  <data key="d6">2</data>
-</edge>
-<edge source="귀화허가" target="2년 이상" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국적법 제6조 간이귀화 요건</data>
-  <data key="d5">국적법 제6조 간이귀화 요건</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="귀화허가" target="종합평가" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
-  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="귀화허가" target="면접심사" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
-  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="귀화허가" target="법무부장관" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">llm</data>
-  <data key="d4">국적법 제4조 귀화에 의한 국적 취득</data>
-  <data key="d5">국적법 제4조 귀화에 의한 국적 취득</data>
   <data key="d6">1</data>
 </edge>
 <edge source="국적회복" target="10년 이상" id="0">
@@ -1500,13 +2383,6 @@
   <data key="d5">국적회복</data>
   <data key="d6">1</data>
 </edge>
-<edge source="국제 결혼안내프로그램" target="91일 이상" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">국제 결혼안내프로그램</data>
-  <data key="d5">국제 결혼안내프로그램</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="귀화(일반,간이,특별)" target="5년 이상" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
@@ -1519,13 +2395,6 @@
   <data key="d3">rule</data>
   <data key="d4">귀화(일반,간이,특별)</data>
   <data key="d5">귀화(일반,간이,특별)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="난민인정신청" target="7일 이내" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">난민신청 및 심사절차</data>
-  <data key="d5">난민신청 및 심사절차</data>
   <data key="d6">1</data>
 </edge>
 <edge source="난민신청 및 심사절차" target="7일 이내" id="0">
@@ -1545,6 +2414,153 @@
 <edge source="난민신청 및 심사절차" target="난민인정신청" id="0">
   <data key="d2">SUBMITS</data>
   <data key="d3">llm</data>
+  <data key="d4">난민신청 및 심사절차</data>
+  <data key="d5">난민신청 및 심사절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="체류일반" target="91일 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">체류일반</data>
+  <data key="d5">체류일반</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="외국인등록사항변경신고" target="15일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">각종신고의무</data>
+  <data key="d5">각종신고의무</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="거소신고" target="91일 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="거소신고" target="90일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국내거소이전신고" target="14일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국내거소이전신고" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국내거소이전신고" target="F-4" id="0">
+  <data key="d2">SUBMITS</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국내거소이전신고" target="여권" id="0">
+  <data key="d2">SUBMITS</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국내거소이전신고" target="국내거소신고" id="0">
+  <data key="d2">SUBMITS</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="주민등록" target="30일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차; 출입국관리법 시행령 제46조 외국인등록증의 반납 등</data>
+  <data key="d6">2</data>
+</edge>
+<edge source="국적이탈신고" target="3개월 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적 선택의무/선택절차/이탈절차/보유상실</data>
+  <data key="d5">국적 선택의무/선택절차/이탈절차/보유상실</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적이탈신고" target="31일까지" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적 선택의무/선택절차/이탈절차/보유상실</data>
+  <data key="d5">국적 선택의무/선택절차/이탈절차/보유상실</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="국적이탈신고" target="국적업무 전담관서" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적업무일반</data>
+  <data key="d5">국적업무일반</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="간이귀화" target="3년 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서; 국적법 제6조 간이귀화 요건</data>
+  <data key="d6">2</data>
+</edge>
+<edge source="혼인귀화" target="2년 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d5">국적법 시행규칙 별표 귀화허가 신청서</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="1년 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등; 종합평가 및 면접심사</data>
+  <data key="d6">2</data>
+</edge>
+<edge source="귀화허가" target="2년 이상" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
+  <data key="d4">국적법 제6조 간이귀화 요건</data>
+  <data key="d5">국적법 제6조 간이귀화 요건</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="종합평가" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="면접심사" id="0">
+  <data key="d2">ALLOWS</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d5">국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="귀화허가" target="법무부장관" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">국적법 제4조 귀화에 의한 국적 취득</data>
+  <data key="d5">국적법 제4조 귀화에 의한 국적 취득</data>
+  <data key="d6">1</data>
+</edge>
+<edge source="난민인정신청" target="7일 이내" id="0">
+  <data key="d2">REQUIRES</data>
+  <data key="d3">rule</data>
   <data key="d4">난민신청 및 심사절차</data>
   <data key="d5">난민신청 및 심사절차</data>
   <data key="d6">1</data>
@@ -1570,27 +2586,6 @@
   <data key="d5">외국인근로자의 고용 등에 관한 법률 제25조 사업 또는 사업장 변경의 허용</data>
   <data key="d6">1</data>
 </edge>
-<edge source="재입국허가" target="1년 이상" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">재입국허가</data>
-  <data key="d5">재입국허가</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="재입국허가" target="2년까지" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">재입국허가</data>
-  <data key="d5">재입국허가</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="재입국허가" target="법무부장관" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">llm</data>
-  <data key="d4">출입국관리법 제30조 재입국허가</data>
-  <data key="d5">출입국관리법 제30조 재입국허가</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="귀화신청" target="1년 이내" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
@@ -1598,26 +2593,19 @@
   <data key="d5">종합평가 및 면접심사</data>
   <data key="d6">1</data>
 </edge>
-<edge source="체류기간연장" target="전 4개월부터" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류기간연장</data>
-  <data key="d5">체류기간연장</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="체류기간연장" target="출입국·외국인청" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류기간연장</data>
-  <data key="d5">체류기간연장</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="체류일반" target="91일 이상" id="0">
+<edge source="국내거소신고" target="90일 이내" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
   <data key="d4">체류일반</data>
   <data key="d5">체류일반</data>
   <data key="d6">1</data>
+</edge>
+<edge source="국내거소신고" target="출입국·외국인청" id="0">
+  <data key="d2">HANDLED_BY</data>
+  <data key="d3">llm</data>
+  <data key="d4">거소신고의의/절차</data>
+  <data key="d5">거소신고의의/절차; 체류일반</data>
+  <data key="d6">2</data>
 </edge>
 <edge source="신분변경" target="30일 이내" id="0">
   <data key="d2">REQUIRES</data>
@@ -1626,32 +2614,18 @@
   <data key="d5">체류자격변경</data>
   <data key="d6">1</data>
 </edge>
-<edge source="체류자격부여" target="90일 이내" id="0">
+<edge source="발급신청" target="90일 이내" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
+  <data key="d4">출입국관리법 제33조 외국인등록증의 발급 등</data>
+  <data key="d5">출입국관리법 제33조 외국인등록증의 발급 등</data>
   <data key="d6">1</data>
 </edge>
-<edge source="체류자격부여" target="60일이내" id="0">
+<edge source="전입신고" target="15일 이내" id="0">
   <data key="d2">REQUIRES</data>
   <data key="d3">rule</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="체류자격부여" target="60일 이내" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="체류자격부여" target="출입국·외국인청" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
+  <data key="d4">출입국관리법 제36조 체류지 변경의 신고</data>
+  <data key="d5">출입국관리법 제36조 체류지 변경의 신고</data>
   <data key="d6">1</data>
 </edge>
 <edge source="이의신청" target="7일이내" id="0">
@@ -1659,139 +2633,6 @@
   <data key="d3">rule</data>
   <data key="d4">출입국사범 심사결정</data>
   <data key="d5">출입국사범 심사결정</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-1" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-1" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-1" target="입국심사" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
-  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-2" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-2" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-2" target="입국심사" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
-  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-3" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="A-3" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-1" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-1" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-6" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-6" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-6" target="체류자격외활동" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격외활동</data>
-  <data key="d5">체류자격외활동</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-1" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-1" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-3" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-3" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="G-1" target="외국인등록" id="0">
-  <data key="d2">EXEMPT_FROM</data>
-  <data key="d3">rule</data>
-  <data key="d4">외국인등록</data>
-  <data key="d5">외국인등록</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="G-1" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
   <data key="d6">1</data>
 </edge>
 <edge source="거소신고의의" target="출입국·외국인청" id="0">
@@ -1836,41 +2677,6 @@
   <data key="d5">출입국관리법 제89조 각종 허가 등의 취소ㆍ변경</data>
   <data key="d6">1</data>
 </edge>
-<edge source="체류자격변경" target="출입국·외국인청" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류자격변경</data>
-  <data key="d5">체류자격변경</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="체류자격외활동" target="출입국·외국인청" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">rule</data>
-  <data key="d4">체류자격외활동</data>
-  <data key="d5">체류자격외활동</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-7" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-7" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-7" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="E-7" target="F-5" id="0">
   <data key="d2">CONVERTS_TO</data>
   <data key="d3">rule</data>
@@ -1899,104 +2705,6 @@
   <data key="d5">출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고</data>
   <data key="d6">1</data>
 </edge>
-<edge source="F-2" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="3년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="5년 이상 계속 투자 상태를 유지" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="2년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-2" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-8" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-8" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-8" target="3년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-8" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-9" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-9" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-9" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="D-10" target="F-5" id="0">
   <data key="d2">CONVERTS_TO</data>
   <data key="d3">rule</data>
@@ -2009,41 +2717,6 @@
   <data key="d3">rule</data>
   <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
   <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-1" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-1" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-1" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-1" target="체류자격외활동" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격외활동</data>
-  <data key="d5">체류자격외활동</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-1" target="근무처 변경·추가 신고" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고</data>
-  <data key="d5">출입국관리법 시행령 제26조 근무처의 변경ㆍ추가 신고</data>
   <data key="d6">1</data>
 </edge>
 <edge source="E-2" target="F-5" id="0">
@@ -2102,90 +2775,6 @@
   <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
   <data key="d6">1</data>
 </edge>
-<edge source="E-6" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-6" target="5년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="2년 이상 체류" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="국내거소신고" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="단순노무행위" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">재외동포 활동범위</data>
-  <data key="d5">재외동포 활동범위</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="선량한 풍속이나 그 밖의 사회질서에 반하는 행위" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">재외동포 활동범위</data>
-  <data key="d5">재외동포 활동범위</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-4" target="법무부장관이 공공의 이익이나 국내 취업질서 등의 유지를 위하여 제한할 필요가 있다고 인정하는 경우" id="0">
-  <data key="d2">REQUIRES</data>
-  <data key="d3">llm</data>
-  <data key="d4">재외동포 활동범위</data>
-  <data key="d5">재외동포 활동범위</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="H-2" target="F-5" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">rule</data>
-  <data key="d4">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d5">출입국관리법 시행령 별표 영주자격에 부합하는 사람(제12조의2제1항 관련)</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="H-2" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="H-2" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="외국인등록사항변경 신고의무" target="출입국·외국인청" id="0">
   <data key="d2">HANDLED_BY</data>
   <data key="d3">llm</data>
@@ -2227,76 +2816,6 @@
   <data key="d4">각종신고의무</data>
   <data key="d5">각종신고의무</data>
   <data key="d6">1</data>
-</edge>
-<edge source="D-2" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-2" target="체류자격외활동" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격외활동</data>
-  <data key="d5">체류자격외활동</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-4" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-4" target="D-2" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격변경</data>
-  <data key="d5">체류자격변경</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-5" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-10" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-10" target="근무처변경·추가허가" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">근무처변경/추가</data>
-  <data key="d5">근무처변경/추가</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-10" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="F-6" target="외국인등록사항변경 신고의무" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">각종신고의무</data>
-  <data key="d5">각종신고의무</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="국내거소신고" target="출입국·외국인청" id="0">
-  <data key="d2">HANDLED_BY</data>
-  <data key="d3">llm</data>
-  <data key="d4">거소신고의의/절차</data>
-  <data key="d5">거소신고의의/절차; 체류일반</data>
-  <data key="d6">2</data>
 </edge>
 <edge source="국민출입국심사" target="여권" id="0">
   <data key="d2">SUBMITS</data>
@@ -2530,13 +3049,6 @@
   <data key="d6">1</data>
 </edge>
 <edge source="H-1" target="근무처변경·추가허가" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">근무처변경/추가</data>
-  <data key="d5">근무처변경/추가</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="E-6-2" target="근무처변경·추가허가" id="0">
   <data key="d2">ALLOWS</data>
   <data key="d3">llm</data>
   <data key="d4">근무처변경/추가</data>
@@ -2970,27 +3482,6 @@
   <data key="d5">처우</data>
   <data key="d6">1</data>
 </edge>
-<edge source="C-3" target="D-8" id="0">
-  <data key="d2">CONVERTS_TO</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격변경</data>
-  <data key="d5">체류자격변경</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="C-3" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="D-3" target="체류자격부여" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">체류자격부여</data>
-  <data key="d5">체류자격부여</data>
-  <data key="d6">1</data>
-</edge>
 <edge source="S-3" target="체류자격외활동" id="0">
   <data key="d2">ALLOWS</data>
   <data key="d3">llm</data>
@@ -3031,13 +3522,6 @@
   <data key="d3">llm</data>
   <data key="d4">출입국관리법 제12조 입국심사</data>
   <data key="d5">출입국관리법 제12조 입국심사</data>
-  <data key="d6">1</data>
-</edge>
-<edge source="B-1" target="입국심사" id="0">
-  <data key="d2">ALLOWS</data>
-  <data key="d3">llm</data>
-  <data key="d4">출입국관리법 시행령 제15조 입국심사</data>
-  <data key="d5">출입국관리법 시행령 제15조 입국심사</data>
   <data key="d6">1</data>
 </edge>
 <edge source="관광상륙허가" target="법무부장관" id="0">

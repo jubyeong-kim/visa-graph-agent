@@ -40,6 +40,23 @@ def load_docs():
     return docs
 
 
+def load_tags():
+    """문서 머리의 `분류:` 줄만 따로 읽는다.
+
+    `load_docs()` 는 본문만 넘기느라 이 줄을 버린다. 그런데 안내문에는
+    `분류: 안내, D-1, D-2, …` 처럼 **그 절차가 어느 체류자격에 적용되는지**가
+    적혀 있다. 이걸 안 쓰는 바람에 "D-2 인데 근무처를 바꾸려면" 에 답을 못 하고
+    엉뚱한 「외국인등록사항변경 신고」로 끌려갔다.
+    """
+    tags = {}
+    for p in sorted(glob.glob(os.path.join(DOC_DIR, "*.md"))):
+        raw = open(p, encoding="utf-8").read()
+        title = raw.split("\n", 1)[0].lstrip("# ").strip()
+        m = re.search(r"^분류:\s*(.+)$", raw, re.M)
+        tags[title] = [x.strip() for x in m.group(1).split(",")] if m else []
+    return tags
+
+
 # ── ② 규칙 보강 ────────────────────────────────────────────────────────────
 def rule_triples(docs):
     """법령 별표에서 규칙만으로 확실한 삼중항을 뽑는다."""
@@ -112,6 +129,21 @@ def rule_triples(docs):
             out.append((m.group(1), "REQUIRES", "영주자격(%s)" % m.group(2), "rule", title))
             out.append(("영주자격(%s)" % m.group(2), "SATISFIED_BY", m.group(2), "rule", title))
 
+    # 절차 안내문의 `분류:` 에 적힌 체류자격 → 그 절차를 쓸 수 있다.
+    #   「근무처변경/추가」  분류: 안내, D-1, D-2, …, E-6-2
+    # 안내문에만 적용한다. 법령 조문의 분류는 그 조문이 **언급하는** 자격이지
+    # 그 자격이 할 수 있는 절차가 아니다(제26조 분류에 E-1·E-7 이 있지만 그건
+    # 신고 대상 범위를 말한 것이다). 안내문은 "이 자격인 사람이 하는 절차" 라는
+    # 뜻이 분명하다.
+    for title, tl in load_tags().items():
+        if not tl or tl[0] != "안내":
+            continue
+        codes = [t for t in tl if re.fullmatch(r"[A-H]-\d{1,2}(?:-\d)?", t)]
+        if not codes or len(codes) > 14:      # 전 자격 공통 절차는 정보가 없다
+            continue
+        for c in codes:
+            out.append((c, "ALLOWS", title, "rule", title))
+
     # 기한·기간 요건. 골든셋을 12 → 30문항으로 늘리자마자 이게 **한 부류 전체**로
     # 안 뽑히고 있다는 것이 드러났다 — 12문항에서는 「체류기간연장」 하나로만 보였다.
     #   "입국한 날부터 90일을 초과하여 체류"  "사유가 발생한 날로부터 15일 이내"
@@ -123,11 +155,15 @@ def rule_triples(docs):
     # 보존기간·수수료·벌금처럼 요건이 아닌 기간도 버린다. 58줄 → 40줄로 걸러진다.
     # "만료하기 전 4개월부터" 처럼 **숫자 앞에** 전/이후가 오는 꼴도 잡아야 한다.
     # 이걸 놓쳐서 체류기간연장 기한이 계속 안 뽑혔다.
-    per_subj = Counter()
-    PERIOD = re.compile(r"(?:(전|이후)\s*)?(\d+\s*(?:일|개월|년))\s*"
+    per_subj, cands = Counter(), []
+    # `[을를]?` 가 있어야 하는 이유: 「외국인등록」 안내문은 "90일을 초과하여" 라고
+    # 쓴다. 조사 하나 때문에 외국인등록의 **핵심 요건**이 통째로 안 뽑혔고,
+    # "언제까지 외국인등록을 해야 하나" 에 옆에 있던 "15일 이내"(변경신고 기한)로
+    # 답했다. 없는 것을 모른다고 하는 것보다 **틀린 것을 자신 있게 말하는 쪽**이 나쁘다.
+    PERIOD = re.compile(r"(?:(전|이후)\s*)?(\d+\s*(?:일|개월|년))\s*[을를]?\s*"
                         r"(이내|이상|초과|미만|전부터|부터|까지)")
     ACT = re.compile(r"신청|신고|등록|체류|거주|이수|허가|받아야|하여야")
-    NOT_REQ = re.compile(r"보존|수수료|과태료|벌금|징역|유효기간|발급일")
+    NOT_REQ = re.compile(r"보존|수수료|과태료|벌금|징역|유효기간|발급일|촬영|사진")
     # 주어 고르기가 이 규칙의 전부다. 처음엔 문서 제목을 그냥 썼다가
     #   (외국인등록) -[REQUIRES]-> (15일 이내)      ← 주어는 외국인등록'사항변경신고'
     #   (국적법 시행령 제4조 귀화허가를 받은 사람에 대한 국민선서…) -[REQUIRES]-> …
@@ -158,23 +194,48 @@ def rule_triples(docs):
                 # 거리 제한 없이 집었더니 주어가 전부 `외국인등록` 으로 쏠렸다.
                 before = [p for pos, p in procs_at
                           if 0 < m.start() - pos <= 80]
-                if before:
+                # 한국어는 동사가 끝에 온다. "…15일 이내에 …외국인등록사항변경신고를
+                # 하여야 합니다" 에서 진짜 주어는 **뒤**에 있다. 앞만 보다가 줄 맨
+                # 앞의 `외국인등록` 을 집었고, 변경신고 기한이 외국인등록의 요건으로
+                # 둔갑했다. 뒤를 보되 "…를 하여야" 꼴일 때만 — 서식은
+                # "일반귀화 … 5년 … 간이귀화 … 3년" 처럼 이름이 앞에 붙으므로
+                # 무조건 뒤를 보면 그쪽이 깨진다.
+                after = [p for pos, p in procs_at
+                         if 0 < pos - m.end() <= 80
+                         and re.match(r"[을를]?\s*(하여야|해야|하여|합니다|하면)",
+                                      line[pos + len(p):pos + len(p) + 8])]
+                if after:
+                    subj = after[0]
+                elif before:
                     subj = before[-1]
+                elif not (IS_ART.search(title) or "별표" in title):
+                    # **제 문서 제목을 먼저** 쓴다. 줄 안에 다른 문서 이름이 섞여
+                    # 있다고 그쪽에 붙이면 남의 요건이 된다 — 「각종신고의무」의
+                    # "15일 이내"가 줄에 적힌 `외국인등록` 에게 붙어서, 외국인등록이
+                    # 자기 요건도 아닌 기한을 달고 다녔다.
+                    subj = title
                 else:
                     other = [t for t in titles if len(t) >= 4 and t in line]
-                    if other:
-                        subj = max(other, key=len)
-                    elif IS_ART.search(title) or "별표" in title:
+                    if not other:
                         continue      # 법령 조문·서식은 제목이 절차명이 아니다
-                    else:
-                        subj = title
+                    subj = max(other, key=len)
                 cond = re.sub(r"\s+", " ", m.group(0)).strip()
-                # 한 절차에 기한이 일곱 개씩 붙으면 그건 남의 것을 끌어온 것이다.
-                # `외국인등록` 이 실제로 7개를 달고 근거를 독점했다.
-                if per_subj[subj] >= 3:
-                    continue
-                per_subj[subj] += 1
-                out.append((subj, "REQUIRES", cond, "rule", title))
+                # 상한은 여기서 세지 않는다. 먼저 온 것이 이기면 **남의 문서에서
+                # 주운 기한**이 자리를 차지한다. 실제로 `외국인등록` 의 요건 세 칸을
+                # 「각종신고의무」의 15일과 귀화 신청서의 사진 규격이 차지했고,
+                # 정작 「외국인등록」 문서 자신의 "90일 초과" 가 상한에 막혔다.
+                # 다 모은 뒤 **제 문서에서 온 것부터** 채운다.
+                cands.append((subj, cond, title, title == subj))
+
+    # 한 절차에 기한이 일곱 개씩 붙으면 그건 남의 것을 끌어온 것이다.
+    # `외국인등록` 이 실제로 7개를 달고 근거를 독점했다. 상한은 3개로 두되,
+    # 제 문서에서 온 것(own=True)을 먼저 넣는다. 파이썬 정렬은 안정적이라
+    # 같은 순위 안에서는 원래 나온 차례가 유지된다.
+    for subj, cond, title, _own in sorted(cands, key=lambda c: not c[3]):
+        if per_subj[subj] >= 3:
+            continue
+        per_subj[subj] += 1
+        out.append((subj, "REQUIRES", cond, "rule", title))
 
     # 면제. `n1-2`("외국인등록 안 해도 되는 사람이 있나요?")가 이것 때문에 틀렸다.
     # 스키마에 면제 관계가 없어서 골든셋에 REQUIRES 로 썼는데, 그건 뜻이 반대다.

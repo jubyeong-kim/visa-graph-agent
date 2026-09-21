@@ -139,6 +139,30 @@ def judge(q, gold, ans):
     return v.startswith("O")
 
 
+BASE_CACHE = "output/basic_answers.json"
+
+
+def basic_cached(qid, q):
+    """대조군 답변은 한 번 만들고 얼어붙인다.
+
+    처음에는 매 실행마다 새로 만들었다. BM25 검색 결과는 같은데 답을 쓰는 LLM 이
+    실행마다 달라서, 코드를 한 줄도 안 고쳤는데 대조군 점수가 17 → 19 → 21 로
+    움직였다. 움직이는 자를 대고 재면 "그래프가 이겼다"는 말이 성립하지 않는다.
+    다시 만들려면 이 파일을 지우면 된다.
+    """
+    try:
+        cache = json.load(open(BASE_CACHE, encoding="utf-8"))
+    except (OSError, ValueError):
+        cache = {}
+    if qid not in cache:
+        ans, docs = basic_rag(q)
+        cache[qid] = {"answer": ans, "docs": docs}
+        os.makedirs("output", exist_ok=True)
+        json.dump(cache, open(BASE_CACHE, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=1)
+    return cache[qid]["answer"], cache[qid]["docs"]
+
+
 # ── ③ 실패 층 분류 ─────────────────────────────────────────────────────────
 def failure_layer(item, res, recall):
     """틀린 건이 어디서 깨졌는지 가른다.
@@ -182,7 +206,7 @@ def main():
         if no_basic:
             b_ans, b_docs, b_ok = "", [], False
         else:
-            b_ans, b_docs = basic_rag(it["q"])
+            b_ans, b_docs = basic_cached(it["id"], it["q"])
             b_ok = judge(it["q"], it["expected_answer"], b_ans)
         layer = None if g_ok else failure_layer(it, res, rec)
         rows.append({"id": it["id"], "kind": it["kind"], "hops": it["hops"], "q": it["q"],

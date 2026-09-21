@@ -28,49 +28,660 @@
   ]
  },
  {
-  "h": "외국인등록",
-  "r": "REQUIRES",
-  "t": "15일 이내",
+  "h": "D-1",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
   "origin": "rule",
   "sources": [
    "각종신고의무"
   ]
  },
  {
-  "h": "거소신고의의/절차",
-  "r": "REQUIRES",
-  "t": "91일 이상",
+  "h": "D-2",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-4",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-5",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-6",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-7",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-8",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "D-9",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "E-1",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "E-10",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "F-2",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "F-4",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "F-6",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "H-2",
+  "r": "ALLOWS",
+  "t": "각종신고의무",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "F-4",
+  "r": "ALLOWS",
+  "t": "거소신고의의/절차",
   "origin": "rule",
   "sources": [
    "거소신고의의/절차"
   ]
  },
  {
-  "h": "거소신고의의/절차",
-  "r": "REQUIRES",
-  "t": "90일 이내",
+  "h": "F-6",
+  "r": "ALLOWS",
+  "t": "국제 결혼안내프로그램",
   "origin": "rule",
   "sources": [
-   "거소신고의의/절차"
+   "국제 결혼안내프로그램"
   ]
  },
  {
-  "h": "국내거소이전신고",
-  "r": "REQUIRES",
-  "t": "14일 이내",
+  "h": "D-1",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
   "origin": "rule",
   "sources": [
-   "거소신고의의/절차"
+   "근무처변경/추가"
   ]
  },
  {
-  "h": "주민등록",
-  "r": "REQUIRES",
-  "t": "30일 이내",
+  "h": "D-2",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
   "origin": "rule",
   "sources": [
-   "거소신고의의/절차",
-   "출입국관리법 시행령 제46조 외국인등록증의 반납 등"
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-3",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-4",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-5",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-6",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-7",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-8",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "D-9",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "E-6",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "E-6-2",
+  "r": "ALLOWS",
+  "t": "근무처변경/추가",
+  "origin": "rule",
+  "sources": [
+   "근무처변경/추가"
+  ]
+ },
+ {
+  "h": "A-1",
+  "r": "ALLOWS",
+  "t": "사증(VISA)",
+  "origin": "rule",
+  "sources": [
+   "사증(VISA)"
+  ]
+ },
+ {
+  "h": "A-3",
+  "r": "ALLOWS",
+  "t": "사증(VISA)",
+  "origin": "rule",
+  "sources": [
+   "사증(VISA)"
+  ]
+ },
+ {
+  "h": "B-1",
+  "r": "ALLOWS",
+  "t": "사증(VISA)",
+  "origin": "rule",
+  "sources": [
+   "사증(VISA)"
+  ]
+ },
+ {
+  "h": "B-2",
+  "r": "ALLOWS",
+  "t": "사증(VISA)",
+  "origin": "rule",
+  "sources": [
+   "사증(VISA)"
+  ]
+ },
+ {
+  "h": "C-3",
+  "r": "ALLOWS",
+  "t": "사증(VISA)",
+  "origin": "rule",
+  "sources": [
+   "사증(VISA)"
+  ]
+ },
+ {
+  "h": "F-4",
+  "r": "ALLOWS",
+  "t": "승무원/상륙허가",
+  "origin": "rule",
+  "sources": [
+   "승무원/상륙허가"
+  ]
+ },
+ {
+  "h": "F-5",
+  "r": "ALLOWS",
+  "t": "승무원/상륙허가",
+  "origin": "rule",
+  "sources": [
+   "승무원/상륙허가"
+  ]
+ },
+ {
+  "h": "D-1",
+  "r": "ALLOWS",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "D-6",
+  "r": "ALLOWS",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "F-1",
+  "r": "ALLOWS",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "F-3",
+  "r": "ALLOWS",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "G-1",
+  "r": "ALLOWS",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "F-4",
+  "r": "ALLOWS",
+  "t": "재외동포 활동범위",
+  "origin": "rule",
+  "sources": [
+   "재외동포 활동범위"
+  ]
+ },
+ {
+  "h": "A-1",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "A-2",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "A-3",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "D-1",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "D-2",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "D-4",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "D-8",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "F-3",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "F-4",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "F-5",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "F-6",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "H-2",
+  "r": "ALLOWS",
+  "t": "재입국허가",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "F-6",
+  "r": "ALLOWS",
+  "t": "체류기간연장",
+  "origin": "rule",
+  "sources": [
+   "체류기간연장"
+  ]
+ },
+ {
+  "h": "A-1",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "A-2",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "A-3",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "C-3",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "D-2",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "D-4",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "D-8",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "F-6",
+  "r": "ALLOWS",
+  "t": "체류자격변경",
+  "origin": "rule",
+  "sources": [
+   "체류자격변경"
+  ]
+ },
+ {
+  "h": "A-1",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "A-2",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "A-3",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "C-3",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "F-1",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "F-2",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "F-3",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "F-5",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "G-1",
+  "r": "ALLOWS",
+  "t": "체류자격부여",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "D-2",
+  "r": "ALLOWS",
+  "t": "체류자격외활동",
+  "origin": "rule",
+  "sources": [
+   "체류자격외활동"
+  ]
+ },
+ {
+  "h": "D-6",
+  "r": "ALLOWS",
+  "t": "체류자격외활동",
+  "origin": "rule",
+  "sources": [
+   "체류자격외활동"
+  ]
+ },
+ {
+  "h": "E-1",
+  "r": "ALLOWS",
+  "t": "체류자격외활동",
+  "origin": "rule",
+  "sources": [
+   "체류자격외활동"
   ]
  },
  {
@@ -110,90 +721,6 @@
   ]
  },
  {
-  "h": "국적이탈신고",
-  "r": "REQUIRES",
-  "t": "3개월 이내",
-  "origin": "rule",
-  "sources": [
-   "국적 선택의무/선택절차/이탈절차/보유상실"
-  ]
- },
- {
-  "h": "국적취득",
-  "r": "REQUIRES",
-  "t": "6개월 이내",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 국적취득 신고서"
-  ]
- },
- {
-  "h": "외국인등록",
-  "r": "REQUIRES",
-  "t": "6개월 이내",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서"
-  ]
- },
- {
-  "h": "일반귀화",
-  "r": "REQUIRES",
-  "t": "5년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서",
-   "귀화(일반,간이,특별)"
-  ]
- },
- {
-  "h": "간이귀화",
-  "r": "REQUIRES",
-  "t": "3년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서",
-   "국적법 제6조 간이귀화 요건"
-  ]
- },
- {
-  "h": "혼인귀화",
-  "r": "REQUIRES",
-  "t": "2년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서"
-  ]
- },
- {
-  "h": "외국인등록",
-  "r": "REQUIRES",
-  "t": "1년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서"
-  ]
- },
- {
-  "h": "귀화허가",
-  "r": "REQUIRES",
-  "t": "1년 이내",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등",
-   "종합평가 및 면접심사"
-  ]
- },
- {
-  "h": "귀화허가",
-  "r": "REQUIRES",
-  "t": "2년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 제6조 간이귀화 요건"
-  ]
- },
- {
   "h": "국적회복",
   "r": "REQUIRES",
   "t": "10년 이상",
@@ -230,7 +757,7 @@
   ]
  },
  {
-  "h": "난민인정신청",
+  "h": "난민신청 및 심사절차",
   "r": "REQUIRES",
   "t": "7일 이내",
   "origin": "rule",
@@ -239,7 +766,200 @@
   ]
  },
  {
-  "h": "난민신청 및 심사절차",
+  "h": "외국인등록",
+  "r": "REQUIRES",
+  "t": "90일을 초과",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "외국인등록",
+  "r": "REQUIRES",
+  "t": "90일 이내",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "재입국허가",
+  "r": "REQUIRES",
+  "t": "1년 이상",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "재입국허가",
+  "r": "REQUIRES",
+  "t": "2년까지",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "체류기간연장",
+  "r": "REQUIRES",
+  "t": "전 4개월부터",
+  "origin": "rule",
+  "sources": [
+   "체류기간연장"
+  ]
+ },
+ {
+  "h": "체류일반",
+  "r": "REQUIRES",
+  "t": "91일 이상",
+  "origin": "rule",
+  "sources": [
+   "체류일반"
+  ]
+ },
+ {
+  "h": "체류자격부여",
+  "r": "REQUIRES",
+  "t": "90일 이내",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "체류자격부여",
+  "r": "REQUIRES",
+  "t": "60일이내",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "체류자격부여",
+  "r": "REQUIRES",
+  "t": "60일 이내",
+  "origin": "rule",
+  "sources": [
+   "체류자격부여"
+  ]
+ },
+ {
+  "h": "외국인등록사항변경신고",
+  "r": "REQUIRES",
+  "t": "15일 이내",
+  "origin": "rule",
+  "sources": [
+   "각종신고의무"
+  ]
+ },
+ {
+  "h": "거소신고",
+  "r": "REQUIRES",
+  "t": "91일 이상",
+  "origin": "rule",
+  "sources": [
+   "거소신고의의/절차"
+  ]
+ },
+ {
+  "h": "거소신고",
+  "r": "REQUIRES",
+  "t": "90일 이내",
+  "origin": "rule",
+  "sources": [
+   "거소신고의의/절차"
+  ]
+ },
+ {
+  "h": "국내거소이전신고",
+  "r": "REQUIRES",
+  "t": "14일 이내",
+  "origin": "rule",
+  "sources": [
+   "거소신고의의/절차"
+  ]
+ },
+ {
+  "h": "주민등록",
+  "r": "REQUIRES",
+  "t": "30일 이내",
+  "origin": "rule",
+  "sources": [
+   "거소신고의의/절차",
+   "출입국관리법 시행령 제46조 외국인등록증의 반납 등"
+  ]
+ },
+ {
+  "h": "국적이탈신고",
+  "r": "REQUIRES",
+  "t": "3개월 이내",
+  "origin": "rule",
+  "sources": [
+   "국적 선택의무/선택절차/이탈절차/보유상실"
+  ]
+ },
+ {
+  "h": "국적이탈신고",
+  "r": "REQUIRES",
+  "t": "31일까지",
+  "origin": "rule",
+  "sources": [
+   "국적 선택의무/선택절차/이탈절차/보유상실"
+  ]
+ },
+ {
+  "h": "일반귀화",
+  "r": "REQUIRES",
+  "t": "5년 이상",
+  "origin": "rule",
+  "sources": [
+   "국적법 시행규칙 별표 귀화허가 신청서",
+   "귀화(일반,간이,특별)"
+  ]
+ },
+ {
+  "h": "간이귀화",
+  "r": "REQUIRES",
+  "t": "3년 이상",
+  "origin": "rule",
+  "sources": [
+   "국적법 시행규칙 별표 귀화허가 신청서",
+   "국적법 제6조 간이귀화 요건"
+  ]
+ },
+ {
+  "h": "혼인귀화",
+  "r": "REQUIRES",
+  "t": "2년 이상",
+  "origin": "rule",
+  "sources": [
+   "국적법 시행규칙 별표 귀화허가 신청서"
+  ]
+ },
+ {
+  "h": "귀화허가",
+  "r": "REQUIRES",
+  "t": "1년 이내",
+  "origin": "rule",
+  "sources": [
+   "국적법 시행령 제4조 귀화허가 신청자에 대한 종합평가 등",
+   "종합평가 및 면접심사"
+  ]
+ },
+ {
+  "h": "귀화허가",
+  "r": "REQUIRES",
+  "t": "2년 이상",
+  "origin": "rule",
+  "sources": [
+   "국적법 제6조 간이귀화 요건"
+  ]
+ },
+ {
+  "h": "난민인정신청",
   "r": "REQUIRES",
   "t": "7일 이내",
   "origin": "rule",
@@ -275,24 +995,6 @@
   ]
  },
  {
-  "h": "재입국허가",
-  "r": "REQUIRES",
-  "t": "1년 이상",
-  "origin": "rule",
-  "sources": [
-   "재입국허가"
-  ]
- },
- {
-  "h": "재입국허가",
-  "r": "REQUIRES",
-  "t": "2년까지",
-  "origin": "rule",
-  "sources": [
-   "재입국허가"
-  ]
- },
- {
   "h": "귀화신청",
   "r": "REQUIRES",
   "t": "1년 이내",
@@ -302,18 +1004,9 @@
   ]
  },
  {
-  "h": "체류기간연장",
+  "h": "국내거소신고",
   "r": "REQUIRES",
-  "t": "전 4개월부터",
-  "origin": "rule",
-  "sources": [
-   "체류기간연장"
-  ]
- },
- {
-  "h": "체류일반",
-  "r": "REQUIRES",
-  "t": "91일 이상",
+  "t": "90일 이내",
   "origin": "rule",
   "sources": [
    "체류일반"
@@ -329,30 +1022,21 @@
   ]
  },
  {
-  "h": "체류자격부여",
+  "h": "발급신청",
   "r": "REQUIRES",
   "t": "90일 이내",
   "origin": "rule",
   "sources": [
-   "체류자격부여"
+   "출입국관리법 제33조 외국인등록증의 발급 등"
   ]
  },
  {
-  "h": "체류자격부여",
+  "h": "전입신고",
   "r": "REQUIRES",
-  "t": "60일이내",
+  "t": "15일 이내",
   "origin": "rule",
   "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "체류자격부여",
-  "r": "REQUIRES",
-  "t": "60일 이내",
-  "origin": "rule",
-  "sources": [
-   "체류자격부여"
+   "출입국관리법 제36조 체류지 변경의 신고"
   ]
  },
  {
@@ -2158,78 +2842,6 @@
   ]
  },
  {
-  "h": "A-1",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "A-2",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "A-3",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "F-3",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "F-5",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "F-2",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "C-3",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "F-1",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
   "h": "D-3",
   "r": "ALLOWS",
   "t": "체류자격부여",
@@ -2266,43 +2878,7 @@
   ]
  },
  {
-  "h": "G-1",
-  "r": "ALLOWS",
-  "t": "체류자격부여",
-  "origin": "llm",
-  "sources": [
-   "체류자격부여"
-  ]
- },
- {
-  "h": "D-2",
-  "r": "ALLOWS",
-  "t": "체류자격외활동",
-  "origin": "llm",
-  "sources": [
-   "체류자격외활동"
-  ]
- },
- {
   "h": "S-3",
-  "r": "ALLOWS",
-  "t": "체류자격외활동",
-  "origin": "llm",
-  "sources": [
-   "체류자격외활동"
-  ]
- },
- {
-  "h": "D-6",
-  "r": "ALLOWS",
-  "t": "체류자격외활동",
-  "origin": "llm",
-  "sources": [
-   "체류자격외활동"
-  ]
- },
- {
-  "h": "E-1",
   "r": "ALLOWS",
   "t": "체류자격외활동",
   "origin": "llm",

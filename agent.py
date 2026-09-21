@@ -32,6 +32,7 @@ from typing import Any, TypedDict
 
 import networkx as nx
 from langgraph.graph import END, START, StateGraph
+from pydantic import BaseModel, Field
 from rapidfuzz import fuzz
 
 from build_graph import load_env
@@ -126,6 +127,25 @@ def find_entities(q):
         best = max(G.nodes, key=lambda n: fuzz.partial_ratio(n, q), default=None)
         if best and fuzz.partial_ratio(best, q) >= 85:
             seeds.append(best)
+    if not seeds:
+        # 여기까지 와서 빈손이면 답은 무조건 "모른다"가 된다. 실제로 30문항 중
+        # 3문항이 **노드가 그래프에 있는데도** 이렇게 빠졌다.
+        #   "한국인과 결혼해서 귀화하려면"  → 노드 `혼인귀화`
+        #   "체류기간이 지난 뒤에 연장을"    → 노드 `체류기간연장`
+        # 이름이 질문 안에서 쪼개져 있어 부분일치로는 안 잡힌다. BM25 가 이런 질문에서
+        # 이기는 이유가 이거다 — 토큰 단위라 "귀화" 하나로도 문서를 찾는다.
+        #
+        # 위 글자수 8자 이상 규칙을 여기서만 4자까지 풀되, 대신 **글자가 전부**
+        # 질문에 들어 있을 것을 요구한다(`혼인귀화` → 혼·인·귀·화 넷 다 있다).
+        # 빈손일 때만 도는 길이라 이미 맞히던 문항에는 영향이 없다.
+        loose = []
+        for n in G.nodes:
+            if n in HUBS:
+                continue
+            chars = set(re.sub(r"\s", "", n))
+            if len(chars) >= 4 and all(c in qs for c in chars):
+                loose.append((len(chars), n))
+        seeds += [n for _, n in sorted(loose, reverse=True)[:2]]
     return list(dict.fromkeys(seeds))[:5]
 
 
@@ -140,6 +160,7 @@ class S(TypedDict, total=False):
     deepened: int
     context: str
     answer: str
+    reply: dict          # 세 토막 (verdict/steps/details/unknown)
     flags: list
 
 
@@ -290,6 +311,50 @@ def global_reduce(state: S) -> S:
     return {"context": "전역 요약:\n" + txt.strip()}
 
 
+_DOCS = None
+
+
+def doc_text(title):
+    """원문을 제목으로 찾는다. 삼중항만으로는 "그게 뭔가요"에 답할 수 없다."""
+    global _DOCS
+    if _DOCS is None:
+        from build_graph import load_docs
+        _DOCS = load_docs()
+    if title in _DOCS:
+        return _DOCS[title]
+    for k, v in _DOCS.items():        # 출처가 "문서명/하위항목" 꼴일 때가 있다
+        if title.startswith(k) or k.startswith(title):
+            return v
+    return ""
+
+
+def quotes(evidence, limit=6):
+    """근거 삼중항에 나온 말이 실제로 적힌 원문 대목을 함께 넘긴다.
+
+    삼중항 `(근무처변경, HANDLED_BY, 출입국·외국인청)` 만 주면 모델은 "어디서
+    처리하나"까지만 답할 수 있다. 뜻은 원문에만 있어서 "근무처변경이 무엇인가"를
+    물으면 엉뚱한 답이 나간다 — 실제로 그렇게 틀렸다.
+    """
+    out, seen = [], set()
+    for h, r, t, src, _hop in evidence:
+        for key in (label(t), label(h)):
+            key = re.sub(r"\(.*?\)", "", key).strip()
+            if len(key) < 3 or key in seen:
+                continue
+            for title in split_sources(src)[:2]:
+                body = doc_text(title)
+                if key not in body:
+                    continue
+                i = body.index(key)
+                snip = " ".join(body[max(0, i - 120):i + 200].split())
+                seen.add(key)
+                out.append("- %s   (출처: %s)" % (snip, title))
+                break
+            if len(out) >= limit:
+                return out
+    return out
+
+
 def build_context(state: S) -> S:
     ev = [e for e in state.get("evidence", []) if e[1] != "SUMMARY"]
     if not ev:
@@ -298,16 +363,31 @@ def build_context(state: S) -> S:
     for h, r, t, src, hop in ev:
         s = src if isinstance(src, str) else "; ".join(src)
         lines.append("(%s) -[%s]-> (%s)   [%d홉, 출처: %s]" % (label(h), r, label(t), hop, s))
-    return {"context": (state.get("context", "") + "\n근거 삼중항:\n" + "\n".join(lines)).strip()}
+    ctx = state.get("context", "") + "\n근거 삼중항:\n" + "\n".join(lines)
+    q = quotes(ev)
+    if q:
+        ctx += "\n\n원문 발췌:\n" + "\n".join(q)
+    return {"context": ctx.strip()}
 
 
 ANSWER_PROMPT = """너는 한국에 사는 외국인의 체류자격 질문에 답한다.
 
 **아래 근거만으로 답하라.** 근거에 없는 숫자(기간·금액·급수)나 사실은 절대 쓰지 마라.
-근거로 답할 수 없으면 "제가 가진 자료로는 확인되지 않습니다"라고 말하고,
-무엇이 없어서 못 답하는지 한 줄로 알려라.
+체류자격은 코드와 이름을 함께 쓴다(예: E-7 특정활동). 쉬운 한국어로 쓴다.
+세 토막 모두 '~합니다' 체로 통일한다. 토막마다 말투가 달라지면 안 된다.
 
-쉬운 한국어로, 3~5문장으로 답하라. 체류자격은 코드와 이름을 함께 쓴다(예: E-7 특정활동).
+세 토막으로 나눠 답하라.
+- verdict: 한 문장. 되는지/안 되는지, 또는 무엇을 해야 하는지만. 설명은 넣지 마라.
+  조건이 붙는 답이면 그 조건이 있다는 사실까지만 담되, 자연스러운 한 문장으로 써라
+  (예: "E-7에서 영주권(F-5)으로 갈 수 있지만, 요건을 채워야 합니다").
+- steps: 질문한 사람이 **실제로 움직여야 하는 일**만 차례대로. 어디에 신청하고
+  무엇을 내고 언제까지인지. 요건 설명이나 배경은 여기 넣지 마라.
+  움직일 일이 없는 질문(제도가 무엇인지 묻는 등)이면 빈 목록으로 둬라.
+  **실제로 하는 순서대로 적어라** — 요건을 채우는 일이 먼저고 신청·제출이 나중이다.
+- details: 기간·요건·예외를 2~4문장. 근거의 `출처:` 에 적힌 문서 이름을
+  **최소 하나 그대로 인용하라**(예: "출입국관리법 시행령 별표 1의2에 따르면").
+  근거에 없는 문서 이름은 절대 쓰지 마라.
+- unknown: 질문했지만 근거로 답할 수 없는 부분 한 줄. 없으면 빈 문자열.
 
 질문: {q}
 
@@ -316,13 +396,42 @@ ANSWER_PROMPT = """너는 한국에 사는 외국인의 체류자격 질문에 �
 """
 
 
+class Reply(BaseModel):
+    """세 토막으로 받는 답변.
+
+    마크다운으로 써 달라고 **부탁하지 않고 구조로 받는다.** 부탁하면 실행마다
+    서식이 흔들리고, 화면에서 토막마다 다르게 보여 줄 수도 없다.
+    """
+
+    verdict: str = Field(description="한 문장 결론")
+    steps: list[str] = Field(default_factory=list, description="실제로 해야 할 일")
+    details: str = Field(default="", description="기간·요건·예외. 출처 문서명 인용")
+    unknown: str = Field(default="", description="근거로 답할 수 없는 부분. 없으면 빈 문자열")
+
+
+def render(r: "Reply") -> str:
+    out = [r.verdict.strip()]
+    if r.steps:
+        nums = [("%d. " % i) + s.strip() for i, s in enumerate(r.steps, 1)]
+        out.append("**해야 할 일**\n" + "\n".join(nums))
+    if r.details.strip():
+        out.append("**자세히**\n" + r.details.strip())
+    if r.unknown.strip():
+        out.append("*확인되지 않는 것: %s*" % r.unknown.strip())
+    return "\n\n".join(out)
+
+
 def synthesize(state: S) -> S:
     ctx = state.get("context", "").strip()
     if not ctx:
         return {"answer": "제가 가진 자료로는 확인되지 않습니다. "
                           "질문에 나온 체류자격이나 절차가 자료에 없습니다."}
-    txt = llm().invoke(ANSWER_PROMPT.format(q=state["question"], ctx=ctx)).content
-    return {"answer": txt.strip()}
+    msg = ANSWER_PROMPT.format(q=state["question"], ctx=ctx)
+    try:
+        r = llm().with_structured_output(Reply).invoke(msg)
+    except Exception:            # 구조화가 실패하면 줄글로라도 답한다
+        return {"answer": llm().invoke(msg).content.strip()}
+    return {"answer": render(r), "reply": r.model_dump()}
 
 
 NUM = re.compile(r"\d+\s*(?:년|개월|일|급|단계|원|만원|점)")
@@ -349,7 +458,8 @@ def verify(state: S) -> S:
         "근거에 있는 사실은 그대로 살린다. 자연스러운 한국어 문장으로 써라.\n\n"
         "답변:\n%s\n\n근거:\n%s"
         % (", ".join(bad), state["answer"], ctx)).content
-    return {"answer": fixed.strip(), "flags": state.get("flags", []) + ["근거없는 숫자 재작성: %s" % bad]}
+    return {"answer": fixed.strip(), "reply": None,
+            "flags": state.get("flags", []) + ["근거없는 숫자 재작성: %s" % bad]}
 
 
 # ── 분기 ───────────────────────────────────────────────────────────────────
@@ -461,6 +571,7 @@ def ask(question):
         "route": out.get("route"),
         "seeds": out.get("seeds", []),
         "answer": answer,
+        "reply": out.get("reply"),
         "path": kp or out.get("path", []),        # 핵심 경로가 없으면 수집한 것 전부
         "all_path": out.get("path", []),
         "evidence": ev,
