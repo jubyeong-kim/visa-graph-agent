@@ -128,7 +128,7 @@
   ]
  },
  {
-  "h": "재입국허가",
+  "h": "외국인등록",
   "r": "REQUIRES",
   "t": "6개월 이내",
   "origin": "rule",
@@ -166,18 +166,9 @@
   ]
  },
  {
-  "h": "재입국허가",
-  "r": "REQUIRES",
-  "t": "1년 이상",
-  "origin": "rule",
-  "sources": [
-   "국적법 시행규칙 별표 귀화허가 신청서"
-  ]
- },
- {
   "h": "외국인등록",
   "r": "REQUIRES",
-  "t": "6개월 이내",
+  "t": "1년 이상",
   "origin": "rule",
   "sources": [
    "국적법 시행규칙 별표 귀화허가 신청서"
@@ -284,6 +275,24 @@
   ]
  },
  {
+  "h": "재입국허가",
+  "r": "REQUIRES",
+  "t": "1년 이상",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
+  "h": "재입국허가",
+  "r": "REQUIRES",
+  "t": "2년까지",
+  "origin": "rule",
+  "sources": [
+   "재입국허가"
+  ]
+ },
+ {
   "h": "귀화신청",
   "r": "REQUIRES",
   "t": "1년 이내",
@@ -353,6 +362,78 @@
   "origin": "rule",
   "sources": [
    "출입국사범 심사결정"
+  ]
+ },
+ {
+  "h": "A-1",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "A-2",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "A-3",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "D-1",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "D-6",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "F-1",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "F-3",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
+  ]
+ },
+ {
+  "h": "G-1",
+  "r": "EXEMPT_FROM",
+  "t": "외국인등록",
+  "origin": "rule",
+  "sources": [
+   "외국인등록"
   ]
  },
  {

@@ -40,6 +40,11 @@
         "Procedure"
       ],
       [
+        "Visa",
+        "EXEMPT_FROM",
+        "Procedure"
+      ],
+      [
         "Procedure",
         "HANDLED_BY",
         "Organization"

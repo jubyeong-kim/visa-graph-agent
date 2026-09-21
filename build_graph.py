@@ -176,6 +176,32 @@ def rule_triples(docs):
                 per_subj[subj] += 1
                 out.append((subj, "REQUIRES", cond, "rule", title))
 
+    # 면제. `n1-2`("외국인등록 안 해도 되는 사람이 있나요?")가 이것 때문에 틀렸다.
+    # 스키마에 면제 관계가 없어서 골든셋에 REQUIRES 로 썼는데, 그건 뜻이 반대다.
+    #
+    # 함정: 순진하게 "면제" 로 걸면 **`사증면제(B-1)` 이 걸린다.** 그건 체류자격의
+    # 이름이지 면제 관계가 아니다. 그래서 "…면제됩니다" 로 시작하는 **블록 안**의
+    # 체류자격만 잡는다. 블록은 다음 소제목까지다.
+    #
+    # 진짜 이 꼴인 사실은 코퍼스 전체에 한 덩어리뿐이다(외국인등록 면제 대상).
+    # 관계를 하나 더 선언하는 값이 이만큼이라는 것도 기록해 둔다.
+    EX_HEAD = re.compile("([가-힣]{2,12})" + r"\s*(?:예외|면제)[^" + chr(10) + r"]{0,30}면제됩니다")
+    for title, body in docs.items():
+        lines = body.splitlines()
+        for i, line in enumerate(lines):
+            m = EX_HEAD.search(line)
+            if not m:
+                continue
+            proc = m.group(1)
+            for nxt in lines[i + 1:i + 8]:
+                if not nxt.strip().startswith("-"):
+                    break            # 목록이 끝나면 블록도 끝이다
+                # 원문은 "(A-1, A-2, A-3)" 처럼 괄호 하나에 여러 코드를 묶는다.
+                # VISA 정규식은 괄호당 하나만 잡아 A-1 세 자매가 통째로 빠졌다.
+                codes = re.findall(r"[A-H]-\d{1,2}", nxt)
+                for code in dict.fromkeys(codes):
+                    out.append((code, "EXEMPT_FROM", proc, "rule", title))
+
     # 하이코리아 안내문은 문서 제목이 곧 절차 이름이고("체류기간연장"),
     # 본문에 "관할 출입국관리사무소에 신청" 이라고 적혀 있다. 창구를 묻는 질문이
     # 가장 흔한데 LLM 은 이걸 실행마다 놓쳤다 — 실제로 체류기간연장은 노드조차
