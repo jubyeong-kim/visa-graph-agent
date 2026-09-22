@@ -441,7 +441,7 @@ def verify(state: S) -> S:
     """근거에 없는 숫자가 답변에 섞였는지 기계로 본다.
 
     비자 도메인은 "5년"과 "3년"이 완전히 다른 답이다. 모델은 이런 숫자를
-    자신 있게 지어낸다. 확신이 아니라 대조로 잡는다.
+    단정적으로 틀린 값을 쓴다. 확신이 아니라 대조로 잡는다.
     """
     ctx = state.get("context", "")
     bad = [n for n in NUM.findall(state.get("answer", ""))
