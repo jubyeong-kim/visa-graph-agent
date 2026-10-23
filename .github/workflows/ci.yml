@@ -1,0 +1,23 @@
+# PR이 올라오거나 main 에 푸시되면 자체 검사 두 개를 돌린다.
+# 둘 다 LLM 을 부르지 않아 키가 필요 없다. 검사가 하나라도 틀리면 assert 에서 멈추고 실패로 끝난다.
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - run: python test_rules.py
+      - run: python test_traversal.py
