@@ -198,6 +198,7 @@ Claude 로 바꿀 때 걸리는 것 두 가지:
 python fetch_docs.py          # 코퍼스 수집 (약 3분, LLM 불필요)
 python build_graph.py --force # LLM 재추출 (약 1분, $0.05 정도)
 python test_rules.py          # 규칙·정규화 자체 검사
+python test_traversal.py      # 시작 개체·근거 선별 자체 검사
 python evaluate.py            # 홉수별 채점 + BM25 대조
 python agent.py "E-9 비자인데 영주권까지 갈 수 있나요?"
 ```
@@ -216,6 +217,9 @@ python agent.py "E-9 비자인데 영주권까지 갈 수 있나요?"
 **조용히 깨지는 고장이 제일 무섭다.** 각 호를 쪼개는 정규식이 `"10. 주재(D-7)부터
 20. 특정활동(E-7)까지"` 를 "20." 에서 잘라 범위를 반토막 냈다. 그래프 통계는 멀쩡했고
 전환 관계만 소리 없이 사라졌다. `test_rules.py` 가 그 지점들을 지킨다.
+지키는 예시 하나: 별표에 「주재(D-7)부터 특정활동(E-7)까지」라고 적혀 있으면 →
+양 끝만이 아니라 D-7 · D-8 · D-9 · E-1 … E-7 각각에서 F-5 로 가는 전환 관계가 있어야 한다.
+두 자체 검사는 PR 마다 GitHub Actions 에서 돈다(`.github/workflows/ci.yml`).
 
 ## 구성
 
