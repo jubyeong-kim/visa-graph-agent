@@ -94,7 +94,7 @@ def rule_triples(docs):
         found = list(dict.fromkeys(VISA.findall(text)))
         for a, b in re.findall(r"\(([A-H]-\d{1,2})\)\s*부터.*?\(([A-H]-\d{1,2})\)\s*까지", text):
             if a in pos and b in pos and pos[a] <= pos[b]:
-                found += order[pos[a]:pos[b] + 1]
+                found += [a, b]  # 범위의 양 끝만 잡는다
         return [c for c in dict.fromkeys(found) if c != "F-5"]
 
     # 이 도메인에서 한국어 능력과 비자를 잇는 유일한 다리:
